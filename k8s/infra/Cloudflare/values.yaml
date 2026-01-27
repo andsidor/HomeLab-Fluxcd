@@ -1,0 +1,31 @@
+replicaCount: 2
+
+image:
+  repository: cloudflare/cloudflared
+  tag: latest
+  pullPolicy: IfNotPresent
+
+tunnel:
+  # token comes from env, not values
+  name: k8s-prod
+
+env:
+  - name: TUNNEL_TOKEN
+    valueFrom:
+      secretKeyRef:
+        name: cloudflared-token
+        key: TUNNEL_TOKEN
+
+config:
+  ingress:
+    - hostname: app.example.com
+      service: http://my-service.default:8080
+    - service: http_status:404
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 200m
+    memory: 128Mi

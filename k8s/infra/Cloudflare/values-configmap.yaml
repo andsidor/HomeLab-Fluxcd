@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cloudflared-values
+  namespace: cloudflared
+data:
+  values.yaml: |
+    replicaCount: 2
+
+    env:
+      - name: TUNNEL_TOKEN
+        valueFrom:
+          secretKeyRef:
+            name: cloudflared-token
+            key: TUNNEL_TOKEN
+
+    # config:
+    #   ingress:
+    #     - hostname: app.example.com
+    #       service: http://my-service.default:8080
+    #     - service: http_status:404
+
