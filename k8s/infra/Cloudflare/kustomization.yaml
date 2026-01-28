@@ -6,4 +6,5 @@ resources:
   - values-configmap.yaml
   - helmrelease.yaml
   - namespace.yaml
+  - helm-repository.yaml
   
