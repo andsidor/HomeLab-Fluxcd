@@ -18,6 +18,3 @@ spec:
       create: false
       name: external-secrets
     installCRDs: true
-    serviceAccount:
-      create: false
-      name: external-secrets
