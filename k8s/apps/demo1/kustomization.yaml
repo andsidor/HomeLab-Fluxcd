@@ -6,5 +6,6 @@ resources:
 - service.yaml
 - external-secret.yaml
 
-
+dependsOn:
+ - ExternalSecret
 
