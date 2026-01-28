@@ -1,0 +1,20 @@
+# External Secrets Operator
+eso-key.json
+.eso-key.json
+gcp-credentials.json
+*.key.json
+
+# Kubeconfig
+kubeconfig
+.kubeconfig
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

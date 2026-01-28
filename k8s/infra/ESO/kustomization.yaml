@@ -5,3 +5,7 @@ resources:
 - helm-repo.yaml
 - helm-release.yaml
 - serviceaccount.yaml
+- rbac.yaml
+- secret-store.yaml
+- cluster-secret-store.yaml
+- example-external-secret.yaml
