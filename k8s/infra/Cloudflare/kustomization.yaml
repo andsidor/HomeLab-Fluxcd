@@ -4,7 +4,5 @@ namespace: cloudflared
 resources:
   - cloudflared-token.enc.yaml
   - values-configmap.yaml
-  - helmrelease.yaml
-  - namespace.yaml
   - helm-repository.yaml
   
