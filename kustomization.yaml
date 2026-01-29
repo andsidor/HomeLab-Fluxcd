@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - infra/Cert-Manager
   - infra/Certificates
+  - infra/Cloudflare
   - infra/ESO
   - infra/Traefik
   # - apps/demo1

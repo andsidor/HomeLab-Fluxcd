@@ -7,6 +7,7 @@ set -e
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
+YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
 echo -e "${BLUE}=== External Secrets Operator Setup dla Homelaba ===${NC}\n"
@@ -23,8 +24,40 @@ if ! command -v kubectl &> /dev/null; then
     exit 1
 fi
 
-# 3. Pobierz aktualny projekt GCP
-PROJECT_ID=$(gcloud config get-value project)
+# 3. Pobierz lub ustaw projekt GCP
+echo -e "${BLUE}[0/6] Sprawdzam konfigurację GCP...${NC}"
+
+# Jeśli projekt podany jako argument
+if [ -n "$1" ]; then
+    PROJECT_ID="$1"
+    echo -e "${BLUE}[!] Ustawianie projektu: ${PROJECT_ID}${NC}"
+    gcloud config set project "${PROJECT_ID}" --quiet
+else
+    # Spróbuj pobrać aktualny projekt
+    PROJECT_ID=$(gcloud config get-value project 2>/dev/null || echo "")
+    
+    if [ -z "$PROJECT_ID" ]; then
+        echo -e "${YELLOW}[!] Brak ustawionego projektu GCP${NC}"
+        echo -e "${YELLOW}Dostępne projekty:${NC}"
+        gcloud projects list --format="table(project_id,name)"
+        echo ""
+        read -p "Wpisz ID projektu GCP: " PROJECT_ID
+        
+        if [ -z "$PROJECT_ID" ]; then
+            echo -e "${RED}[ERROR] Nie podano ID projektu${NC}"
+            exit 1
+        fi
+        
+        gcloud config set project "${PROJECT_ID}" --quiet
+    fi
+fi
+
+# Sprawdź czy projekt istnieje
+if ! gcloud projects describe "${PROJECT_ID}" &> /dev/null; then
+    echo -e "${RED}[ERROR] Projekt '${PROJECT_ID}' nie istnieje lub brak dostępu${NC}"
+    exit 1
+fi
+
 echo -e "${GREEN}[OK] Projekt GCP: ${PROJECT_ID}${NC}"
 
 # 4. Sprawdź czy service account istnieje
