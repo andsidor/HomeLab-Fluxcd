@@ -2,5 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
- # - infra/ESO
- # - apps/demo1
+  - infra/Cert-Manager
+  - infra/ESO
+  - infra/Traefik
+  # - apps/demo1
+  # - apps/demo2

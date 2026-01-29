@@ -1,0 +1,32 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wildcard-tls
+  namespace: default
+spec:
+  secretName: wildcard-tls-secret
+  duration: 2160h # 90 dni
+  renewBefore: 720h # 30 dni
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  dnsNames:
+  - "example.com"
+  - "*.example.com"
+  # Dodaj więcej domen jeśli potrzebujesz
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: app-tls
+  namespace: demo2
+spec:
+  secretName: app-tls-secret
+  duration: 2160h # 90 dni
+  renewBefore: 720h # 30 dni
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  dnsNames:
+  - "app.example.com"
