@@ -8,6 +8,11 @@ gcp-credentials.json
 kubeconfig
 .kubeconfig
 
+# Notatki i dokumentacja lokalna
+NOTATKI-*.md
+SETUP-*.md
+*.local.md
+
 # IDE
 .vscode/
 .idea/
