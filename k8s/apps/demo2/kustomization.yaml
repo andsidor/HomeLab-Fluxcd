@@ -8,7 +8,4 @@ resources:
 - external-secret.yaml
 - deployment.yaml
 - service.yaml
-    kind: GitRepository
-    name: flux-system
-  dependsOn:
-    - name: external-secrets    # HelmRelease that installs ESO
+
