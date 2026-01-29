@@ -3,8 +3,9 @@ kind: Kustomization
 
 resources:
   - infra/Cert-Manager
-  - infra/Certificates
+  # - infra/Certificates  # DEPLOY PO zainstalowaniu Cert Manager
   - infra/ESO
   - infra/Traefik
+  - infra/Certificate
   # - apps/demo1
   # - apps/demo2
