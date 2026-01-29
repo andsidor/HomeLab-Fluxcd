@@ -2,5 +2,5 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - infra/ESO
-  - apps/demo1
+ # - infra/ESO
+ # - apps/demo1
