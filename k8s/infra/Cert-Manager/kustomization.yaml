@@ -7,4 +7,3 @@ resources:
 - helm-repository.yaml
 - helm-release.yaml
 - cluster-issuers.yaml
-- certificates.yaml
