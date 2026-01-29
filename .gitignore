@@ -1,21 +1,26 @@
-# External Secrets Operator
+# External Secrets Operator - GCP Credentials (SENSITIVE!)
 eso-key.json
 .eso-key.json
 gcp-credentials.json
 *.key.json
+google-*.json
+service-account-*.json
 
 # Kubeconfig
 kubeconfig
 .kubeconfig
+*.kubeconfig
 
 # Notatki i dokumentacja lokalna
 NOTATKI-*.md
 SETUP-*.md
-*.sh 
+GOOG-*.md
+CLOUD*.md
+*.md
 
+# Local setup files
 *.local.md
-setup*.ssh-keygen -t ed25519 -C 'asidor23@gmail.com'
-
+setup.local.sh
 
 # IDE
 .vscode/
@@ -23,7 +28,19 @@ setup*.ssh-keygen -t ed25519 -C 'asidor23@gmail.com'
 *.swp
 *.swo
 *~
+*.iml
 
 # OS
 .DS_Store
 Thumbs.db
+*.DS_Store
+
+# Local environment files
+.env
+.env.local
+*.env.local
+
+# Build artifacts
+/build
+/dist
+*.tar.gz
