@@ -6,6 +6,13 @@ gcp-credentials.json
 google-*.json
 service-account-*.json
 
+# Cloudflare Tunnel Credentials (SENSITIVE!)
+~/.cloudflared/
+.cloudflared/
+*.cloudflared/
+cloudflare*.json
+tunnel-*.json
+
 # Kubeconfig
 kubeconfig
 .kubeconfig
