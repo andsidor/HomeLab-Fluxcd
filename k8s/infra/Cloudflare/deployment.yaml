@@ -1,124 +1,84 @@
 ---
-# ConfigMap: Cloudflare Tunnel Configuration
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: cloudflare-tunnel-config
-  namespace: cloudflare
-data:
-  config.yaml: |
-    tunnel: homelab-tunnel
-    # Zmień na swoje dane z Cloudflare
-    credentials-file: /etc/cloudflare/credentials.json
-    
-    # Ingress rules - definiuj jakie serwisy exponujesz
-    ingress:
-      # Traefik dashboard
-      - hostname: traefik.example.com
-        service: http://traefik.traefik.svc.cluster.local:9000
-      
-      # Przykład aplikacji
-      - hostname: app.example.com
-        service: http://my-app.default.svc.cluster.local:8080
-      
-      # Catch-all - zwróć 404 dla wszystkich pozostałych
-      - service: http_status:404
-
----
-# ServiceAccount dla Cloudflare Tunnel
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: cloudflare-tunnel
-  namespace: cloudflare
-
----
-# Deployment: Cloudflare Tunnel
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cloudflare-tunnel
+  name: cloudflared
   namespace: cloudflare
   labels:
-    app: cloudflare-tunnel
+    app: cloudflared
 spec:
-  replicas: 1
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
   selector:
     matchLabels:
-      app: cloudflare-tunnel
+      app: cloudflared
   template:
     metadata:
       labels:
-        app: cloudflare-tunnel
+        app: cloudflared
     spec:
-      serviceAccountName: cloudflare-tunnel
+      serviceAccountName: cloudflared
       containers:
       - name: cloudflared
         image: cloudflare/cloudflared:latest
         imagePullPolicy: IfNotPresent
-        command: ["cloudflared", "tunnel", "run"]
+        command:
+        - cloudflared
+        - tunnel
+        - --no-autoupdate
+        - run
+        args:
+        - --token=$(TUNNEL_TOKEN)
         env:
         - name: TUNNEL_TOKEN
           valueFrom:
             secretKeyRef:
-              name: cloudflare-token
+              name: cloudflare-tunnel-secret
               key: token
-        # Lub jeśli używasz credentials file:
-        # - name: TUNNEL_CRED_FILE
-        #   value: /etc/cloudflare/credentials.json
-        volumeMounts:
-        - name: config
-          mountPath: /etc/cloudflare
-        - name: credentials
-          mountPath: /etc/cloudflare/credentials
-          readOnly: true
+        ports:
+        - containerPort: 8080
+          name: metrics
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 5
         resources:
           requests:
-            cpu: 50m
-            memory: 64Mi
-          limits:
             cpu: 100m
             memory: 128Mi
-        livenessProbe:
-          exec:
-            command:
-            - cloudflared
-            - tunnel
-            - info
-          initialDelaySeconds: 30
-          periodSeconds: 30
-          timeoutSeconds: 5
-          failureThreshold: 3
+          limits:
+            cpu: 200m
+            memory: 256Mi
         securityContext:
-          readOnlyRootFilesystem: true
+          allowPrivilegeEscalation: false
           runAsNonRoot: true
-          runAsUser: 65534
-      volumes:
-      - name: config
-        configMap:
-          name: cloudflare-tunnel-config
-      - name: credentials
-        secret:
-          secretName: cloudflare-tunnel-credentials
-          defaultMode: 0400
-      securityContext:
-        fsGroup: 65534
-
+          readOnlyRootFilesystem: true
 ---
-# Service (opcjonalny - jeśli potrzebujesz expose'ować healthcheck)
 apiVersion: v1
 kind: Service
 metadata:
-  name: cloudflare-tunnel
+  name: cloudflared
   namespace: cloudflare
   labels:
-    app: cloudflare-tunnel
+    app: cloudflared
 spec:
   type: ClusterIP
-  selector:
-    app: cloudflare-tunnel
   ports:
-  - name: metrics
-    port: 7844
-    targetPort: 7844
+  - port: 8080
+    targetPort: 8080
     protocol: TCP
+    name: metrics
+  selector:
+    app: cloudflared

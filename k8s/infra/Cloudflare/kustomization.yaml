@@ -5,11 +5,6 @@ namespace: cloudflare
 
 resources:
   - namespace.yaml
+  - serviceaccount.yaml
   - external-secret.yaml
   - deployment.yaml
-
-labels:
-  - pairs:
-      app.kubernetes.io/name: cloudflare-tunnel
-      app.kubernetes.io/component: edge-network
-    includeSelectors: true

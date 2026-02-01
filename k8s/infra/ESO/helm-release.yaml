@@ -27,6 +27,13 @@ spec:
         memory: 64Mi
     webhook:
       enabled: true
+      tolerations:
+        - key: "node-role.kubernetes.io/control-plane"
+          operator: "Exists"
+          effect: "NoSchedule"
+        - key: "node.cilium.io/agent-not-ready"
+          operator: "Exists"
+          effect: "NoSchedule"
       resources:
         limits:
           cpu: 100m
@@ -36,6 +43,13 @@ spec:
           memory: 64Mi
     certController:
       enabled: true
+      tolerations:
+        - key: "node-role.kubernetes.io/control-plane"
+          operator: "Exists"
+          effect: "NoSchedule"
+        - key: "node.cilium.io/agent-not-ready"
+          operator: "Exists"
+          effect: "NoSchedule"
       resources:
         limits:
           cpu: 100m
@@ -43,3 +57,10 @@ spec:
         requests:
           cpu: 50m
           memory: 64Mi
+    tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        operator: "Exists"
+        effect: "NoSchedule"
+      - key: "node.cilium.io/agent-not-ready"
+        operator: "Exists"
+        effect: "NoSchedule"
