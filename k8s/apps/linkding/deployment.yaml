@@ -27,6 +27,16 @@ spec:
               value: "true"
             - name: LD_LOG_LEVEL
               value: "INFO"
+            - name: LD_SUPERUSER_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: linkding-credentials
+                  key: username
+            - name: LD_SUPERUSER_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: linkding-credentials
+                  key: password
           volumeMounts:
             - name: linkding-data
               mountPath: /etc/linkding/data
