@@ -32,5 +32,4 @@ spec:
               mountPath: /etc/linkding/data
       volumes:
         - name: linkding-data
-          persistentVolumeClaim:
-            claimName: linkding-data
+          emptyDir: {}
