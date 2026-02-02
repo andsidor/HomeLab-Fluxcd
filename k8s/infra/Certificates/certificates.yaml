@@ -12,9 +12,25 @@ spec:
     name: letsencrypt-prod
     kind: ClusterIssuer
   dnsNames:
-  - "example.com"
-  - "*.example.com"
+  - "andrzejsidor.online"
+  - "*.andrzejsidor.online"
   # Dodaj więcej domen jeśli potrzebujesz
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: sidor-certificate
+  namespace: default
+spec:
+  secretName: sidor-certificate
+  duration: 2160h # 90 dni
+  renewBefore: 720h # 30 dni
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  dnsNames:
+  - "andrzejsidor.online"
+  - "*.andrzejsidor.online"
 ---
 apiVersion: cert-manager.io/v1
 kind: Certificate
@@ -29,4 +45,4 @@ spec:
     name: letsencrypt-prod
     kind: ClusterIssuer
   dnsNames:
-  - "app.example.com"
+  - "app.andrzejsidor.online"
