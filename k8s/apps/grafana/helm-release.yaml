@@ -66,11 +66,7 @@ spec:
     adminPassword: changeme
 
     persistence:
-      enabled: true
-      type: pvc
-      size: 5Gi
-      accessModes:
-        - ReadWriteOnce
+      enabled: false
 
     service:
       type: ClusterIP
