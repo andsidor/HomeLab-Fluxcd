@@ -48,6 +48,10 @@ spec:
             options:
               path: /var/lib/grafana/dashboards/default
 
+    dashboardsConfigMap:
+      - name: grafana-node-dashboard
+        key: node-cpu-memory-dashboard.json
+
     dashboards:
       default:
         kubernetes-cluster:
