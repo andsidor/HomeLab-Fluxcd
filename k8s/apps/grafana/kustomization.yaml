@@ -4,5 +4,6 @@ resources:
   - namespace.yaml
   - helm-repository.yaml
   - dashboard-configmap.yaml
+  - dashboard-cluster-health.yaml
   - helm-release.yaml
   - service-loadbalancer.yaml

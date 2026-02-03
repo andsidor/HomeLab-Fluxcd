@@ -51,6 +51,8 @@ spec:
     dashboardsConfigMap:
       - name: grafana-node-dashboard
         key: node-cpu-memory-dashboard.json
+      - name: grafana-cluster-health-dashboard
+        key: cluster-health-dashboard.json
 
     dashboards:
       default:
