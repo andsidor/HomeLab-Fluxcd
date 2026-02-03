@@ -37,7 +37,9 @@ Successfully deployed Grafana and Prometheus monitoring stack with MetalLB load 
 - **IP Pool**: `192.168.0.220-192.168.0.250`
 - **Status**: ✅ Active, assigning external IPs
 
-### 4. **Custom Dashboard**
+### 4. **Custom Dashboards**
+
+#### Dashboard 1: Node CPU and Memory Monitoring
 - **File**: `k8s/apps/grafana/dashboard-configmap.yaml`
 - **Panels**:
   - Node CPU Usage (per node, time series)
@@ -48,6 +50,17 @@ Successfully deployed Grafana and Prometheus monitoring stack with MetalLB load 
   - Green: < 50%
   - Yellow: 50-80%
   - Red: > 80%
+
+#### Dashboard 2: Cluster Health Overview
+- **File**: `k8s/apps/grafana/dashboard-cluster-health.yaml`
+- **Panels**:
+  - Kubernetes API Server Status (stat card - green/red)
+  - Total Nodes (stat card)
+  - Total Pods (stat card)
+  - Total Namespaces (stat card)
+  - Pods per Namespace (bar chart)
+  - Pod Status Distribution (stacked bar chart - Running/Pending/Failed)
+- **Features**: No Angular graphs - simple stats and bar charts for quick cluster overview
 
 ## Issues Encountered & Resolved
 
@@ -171,6 +184,8 @@ kubectl logs -n prometheus -f prometheus-kube-prometheus-stack-prometheus-0
 3. `Add MetalLB and Grafana LoadBalancer service`
 4. `Disable Grafana persistence to fix pending pod`
 5. `Disable Prometheus PVC for no storage class`
+6. `Add deployment notes for 2026-02-03`
+7. `Add Cluster Health Overview dashboard (simple stats and bar charts)`
 
 ## Files Modified/Created
 
@@ -195,7 +210,8 @@ k8s/apps/grafana/
 ├── namespace.yaml
 ├── helm-repository.yaml
 ├── helm-release.yaml
-├── dashboard-configmap.yaml (custom dashboard)
+├── dashboard-configmap.yaml (custom dashboard - Node CPU/Memory)
+├── dashboard-cluster-health.yaml (custom dashboard - Cluster Health)
 ├── service-loadbalancer.yaml
 ├── kustomization.yaml
 └── README.md
