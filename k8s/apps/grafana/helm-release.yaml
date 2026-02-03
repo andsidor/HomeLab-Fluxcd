@@ -72,6 +72,9 @@ spec:
       accessModes:
         - ReadWriteOnce
 
+    service:
+      type: ClusterIP
+
     ingress:
       enabled: true
       ingressClassName: traefik
