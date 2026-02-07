@@ -20,7 +20,7 @@ spec:
     upgradeCRDs: false
     initContainers:
       - name: velero-plugin-for-gcp
-        image: velero/velero-plugin-for-gcp:v1.9.2
+        image: velero/velero-plugin-for-gcp:v1.13.2
         imagePullPolicy: IfNotPresent
         volumeMounts:
           - mountPath: /target
