@@ -1,0 +1,11 @@
+apiVersion: velero.io/v1
+kind: Backup
+metadata:
+  name: initial-backup
+  namespace: velero
+spec:
+  includedNamespaces:
+    - "*"
+  includeClusterResources: true
+  storageLocation: default
+  ttl: 24h0m0s
