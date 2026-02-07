@@ -14,6 +14,9 @@ spec:
         name: vmware-tanzu
         namespace: velero
   values:
+    kubectl:
+      image:
+        tag: "latest"
     initContainers:
       - name: velero-plugin-for-gcp
         image: velero/velero-plugin-for-gcp:v1.9.2
