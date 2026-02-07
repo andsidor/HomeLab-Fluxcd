@@ -7,6 +7,7 @@ resources:
   - helm-release.yaml
   - external-secret.yaml
   - backup-schedule.yaml
+  - backup-size-exporter.yaml
 
 labels:
   - pairs:

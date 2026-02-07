@@ -1,0 +1,180 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: velero-backup-size-exporter
+  namespace: velero
+data:
+  backup_size_exporter.py: |
+    import http.server
+    import socketserver
+    import subprocess
+    import time
+    import os
+
+    bucket = os.environ.get("BUCKET", "")
+    prefix = os.environ.get("PREFIX", "backups")
+    interval = int(os.environ.get("UPDATE_INTERVAL_SECONDS", "3600"))
+    initial_delay = int(os.environ.get("INITIAL_DELAY_SECONDS", "0"))
+
+    if not bucket:
+        raise SystemExit("BUCKET env var is required")
+
+    state = {
+        "bytes": 0,
+        "updated": 0,
+        "success": 0,
+        "error": 0,
+    }
+
+    def update_metrics():
+        if initial_delay:
+            time.sleep(initial_delay)
+        while True:
+            try:
+                target = f"gs://{bucket}/{prefix}"
+                output = subprocess.check_output(
+                    ["gsutil", "du", "-s", target],
+                    text=True,
+                    stderr=subprocess.STDOUT,
+                ).strip()
+                size = int(output.split()[0])
+                state["bytes"] = size
+                state["updated"] = int(time.time())
+                state["success"] = 1
+                state["error"] = 0
+            except Exception:
+                state["success"] = 0
+                state["error"] = 1
+            time.sleep(interval)
+
+    class MetricsHandler(http.server.BaseHTTPRequestHandler):
+        def do_GET(self):
+            if self.path != "/metrics":
+                self.send_response(404)
+                self.end_headers()
+                return
+
+            labels = f'bucket="{bucket}",prefix="{prefix}"'
+            body = [
+                "# HELP velero_backup_bucket_bytes Total size of Velero backups in bytes.",
+                "# TYPE velero_backup_bucket_bytes gauge",
+                f"velero_backup_bucket_bytes{{{labels}}} {state['bytes']}",
+                "# HELP velero_backup_bucket_last_successful_timestamp Last successful update unix timestamp.",
+                "# TYPE velero_backup_bucket_last_successful_timestamp gauge",
+                f"velero_backup_bucket_last_successful_timestamp{{{labels}}} {state['updated']}",
+                "# HELP velero_backup_bucket_success 1 if last update succeeded, 0 otherwise.",
+                "# TYPE velero_backup_bucket_success gauge",
+                f"velero_backup_bucket_success{{{labels}}} {state['success']}",
+                "# HELP velero_backup_bucket_error 1 if last update failed, 0 otherwise.",
+                "# TYPE velero_backup_bucket_error gauge",
+                f"velero_backup_bucket_error{{{labels}}} {state['error']}",
+            ]
+
+            self.send_response(200)
+            self.send_header("Content-Type", "text/plain; version=0.0.4")
+            self.end_headers()
+            self.wfile.write(("\n".join(body) + "\n").encode("utf-8"))
+
+        def log_message(self, format, *args):
+            return
+
+    if __name__ == "__main__":
+        import threading
+
+        updater = threading.Thread(target=update_metrics, daemon=True)
+        updater.start()
+
+        with socketserver.TCPServer(("", 8080), MetricsHandler) as httpd:
+            httpd.serve_forever()
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: velero-backup-size-exporter
+  namespace: velero
+  labels:
+    app: velero-backup-size-exporter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: velero-backup-size-exporter
+  template:
+    metadata:
+      labels:
+        app: velero-backup-size-exporter
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: exporter
+          image: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
+          imagePullPolicy: IfNotPresent
+          command:
+            - python
+            - /config/backup_size_exporter.py
+          env:
+            - name: BUCKET
+              value: homelab-k8s-storage-bucket-sidor
+            - name: PREFIX
+              value: backups
+            - name: UPDATE_INTERVAL_SECONDS
+              value: "3600"
+            - name: INITIAL_DELAY_SECONDS
+              value: "180"
+            - name: GOOGLE_APPLICATION_CREDENTIALS
+              value: /credentials/cloud
+          ports:
+            - name: http-metrics
+              containerPort: 8080
+          volumeMounts:
+            - name: exporter-config
+              mountPath: /config
+              readOnly: true
+            - name: gcp-credentials
+              mountPath: /credentials
+              readOnly: true
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 200m
+              memory: 256Mi
+      volumes:
+        - name: exporter-config
+          configMap:
+            name: velero-backup-size-exporter
+        - name: gcp-credentials
+          secret:
+            secretName: velero-gcp-credentials
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: velero-backup-size-exporter
+  namespace: velero
+  labels:
+    app: velero-backup-size-exporter
+spec:
+  selector:
+    app: velero-backup-size-exporter
+  ports:
+    - name: http-metrics
+      port: 8080
+      targetPort: http-metrics
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: velero-backup-size-exporter
+  namespace: velero
+  labels:
+    release: kube-prometheus-stack
+spec:
+  selector:
+    matchLabels:
+      app: velero-backup-size-exporter
+  endpoints:
+    - port: http-metrics
+      path: /metrics
+      interval: 1m
