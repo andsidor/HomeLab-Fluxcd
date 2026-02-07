@@ -17,6 +17,7 @@ spec:
     kubectl:
       image:
         tag: "latest"
+    upgradeCRDs: false
     initContainers:
       - name: velero-plugin-for-gcp
         image: velero/velero-plugin-for-gcp:v1.9.2
