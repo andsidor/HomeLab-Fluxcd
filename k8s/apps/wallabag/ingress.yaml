@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: wallabag.local
+    - host: wallabag.andrzejsidor.online
       http:
         paths:
           - path: /
