@@ -38,6 +38,8 @@ spec:
                 secretKeyRef:
                   name: wallabag-db-credentials
                   key: password
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
           volumeMounts:
             - name: postgres-data
               mountPath: /var/lib/postgresql/data
