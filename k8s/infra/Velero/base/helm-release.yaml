@@ -34,5 +34,5 @@ spec:
             name: plugins
     kubectl:
       image:
-        repository: registry.k8s.io/kubectl
-        tag: v1.34.3
+        repository: docker.io/bitnami/kubectl
+        tag: 1.34.3
