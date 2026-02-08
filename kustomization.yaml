@@ -8,6 +8,7 @@ resources:
   - k8s/infra/ESO
   - k8s/infra/Prometheus
   - k8s/infra/Loki
+  - k8s/infra/Local-Path
   - k8s/infra/MetalLB
   - k8s/apps/linkding
   - k8s/apps/grafana

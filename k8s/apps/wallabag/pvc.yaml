@@ -4,6 +4,7 @@ metadata:
   name: wallabag-data
   namespace: wallabag
 spec:
+  storageClassName: local-path
   accessModes:
     - ReadWriteOnce
   resources:
@@ -16,6 +17,7 @@ metadata:
   name: wallabag-postgres-data
   namespace: wallabag
 spec:
+  storageClassName: local-path
   accessModes:
     - ReadWriteOnce
   resources:
