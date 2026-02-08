@@ -33,6 +33,12 @@ spec:
             url: http://kube-prometheus-stack-prometheus.prometheus.svc.cluster.local:9090
             access: proxy
             isDefault: true
+          - name: Loki
+            type: loki
+            uid: loki
+            url: http://loki.loki.svc.cluster.local:3100
+            access: proxy
+            isDefault: false
 
     dashboardProviders:
       dashboardproviders.yaml:
@@ -53,6 +59,8 @@ spec:
         key: node-cpu-memory-dashboard.json
       - name: grafana-cluster-health-dashboard
         key: cluster-health-dashboard.json
+      - name: grafana-loki-logs-dashboard
+        key: loki-logs-dashboard.json
 
     dashboards:
       default:
