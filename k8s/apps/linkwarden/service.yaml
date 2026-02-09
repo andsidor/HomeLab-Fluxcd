@@ -4,7 +4,7 @@ metadata:
   name: linkwarden
   namespace: linkwarden
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: linkwarden
   ports:
