@@ -38,6 +38,8 @@ spec:
                 secretKeyRef:
                   name: linkwarden-postgres-credentials
                   key: database
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
           volumeMounts:
             - name: postgres-data
               mountPath: /var/lib/postgresql/data

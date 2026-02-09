@@ -38,9 +38,11 @@ spec:
                 secretKeyRef:
                   name: linkwarden-credentials
                   key: nextauth_url
+            - name: STORAGE_FOLDER
+              value: data
           volumeMounts:
             - name: linkwarden-data
-              mountPath: /data
+              mountPath: /data/data
       volumes:
         - name: linkwarden-data
           persistentVolumeClaim:
