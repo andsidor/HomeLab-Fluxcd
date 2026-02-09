@@ -12,5 +12,6 @@ resources:
 
   - k8s/infra/MetalLB
   - k8s/apps/linkding
+  - k8s/apps/linkwarden
   - k8s/apps/grafana
 
