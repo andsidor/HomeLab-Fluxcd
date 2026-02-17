@@ -16,6 +16,12 @@ spec:
   values:
     replicaCount: 1
     service:
-      type: ClusterIP
+      type: LoadBalancer
     ingress:
-      enabled: false
+      enabled: true
+      ingressClassName: traefik
+      hosts:
+        - host: lamp.andrzejsidor.online
+          paths:
+            - path: /
+              type: ImplementationSpecific
