@@ -1,0 +1,85 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: velero
+  namespace: velero
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: velero
+      version: "7.*"
+      sourceRef:
+        kind: HelmRepository
+        name: velero
+        namespace: velero
+  values:
+    # Number of Velero replicas
+    replicas: 1
+    
+    # Container resource requests and limits
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+      limits:
+        cpu: 500m
+        memory: 512Mi
+    
+    # Server configuration
+    configuration:
+      # Backup storage location - using Google Cloud Storage (GCS)
+      backupStorageLocation:
+        # Change 'default' to the name of your backup storage location
+        name: default
+        provider: gcp
+        bucket: velero-backups  # GCS bucket name (must be globally unique)
+        # GCP-specific configuration
+        config:
+          # GCP project ID
+          project: ""  # Set to your GCP project ID
+          # GCS uses credentials from the mounted secret (velero-gcp-credentials)
+      
+      # Volume snapshot location for persistent volume snapshots
+      volumeSnapshotLocation:
+        name: default
+        # For Longhorn with GCP
+        provider: gcp
+        config:
+          snapshotLocation: us-central1  # GCP region for snapshots
+      
+      # Backup schedule and retention
+      schedules:
+        daily-backup:
+          schedule: "0 2 * * *"  # 2 AM daily
+          template:
+            ttl: "720h"  # 30 days retention
+            includedNamespaces:
+              - "*"
+            excludedNamespaces:
+              - kube-node-lease
+              - kube-public
+              - kube-system
+    
+    # Container security
+    securityContext:
+      fsGroup: 65534
+    
+    # Node affinity for scheduling
+    affinity:
+      nodeAffinity:
+        preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            preference:
+              matchExpressions:
+                - key: kubernetes.io/hostname
+                  operator: In
+                  values:
+                    - master  # Adjust to your cluster
+    
+    # Backup storage - using Longhorn or local PVC
+    backupStorage:
+      enabled: true
+      size: 100Gi
+      # storageClassName: longhorn  # Uncomment if using Longhorn
+      storageClassName: ""  # Use default storage class
