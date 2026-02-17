@@ -33,11 +33,10 @@ spec:
         # Change 'default' to the name of your backup storage location
         name: default
         provider: gcp
-        bucket: velero-backups  # GCS bucket name (must be globally unique)
+        bucket: homelab-k8s-storage-bucket-sidor-1  # GCS bucket name
         # GCP-specific configuration
         config:
-          # GCP project ID
-          project: ""  # Set to your GCP project ID
+          # GCP project ID - automatically detected from service account
           # GCS uses credentials from the mounted secret (velero-gcp-credentials)
       
       # Volume snapshot location for persistent volume snapshots
@@ -46,14 +45,14 @@ spec:
         # For Longhorn with GCP
         provider: gcp
         config:
-          snapshotLocation: us-central1  # GCP region for snapshots
+          snapshotLocation: europe-central2  # GCP region for snapshots
       
       # Backup schedule and retention
       schedules:
         daily-backup:
           schedule: "0 2 * * *"  # 2 AM daily
           template:
-            ttl: "720h"  # 30 days retention
+            ttl: "72h"  # 30 days retention
             includedNamespaces:
               - "*"
             excludedNamespaces:
@@ -80,6 +79,6 @@ spec:
     # Backup storage - using Longhorn or local PVC
     backupStorage:
       enabled: true
-      size: 100Gi
+      size: 1Gi
       # storageClassName: longhorn  # Uncomment if using Longhorn
       storageClassName: ""  # Use default storage class
