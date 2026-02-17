@@ -141,6 +141,9 @@ spec:
       - name: weave-gitops
         image: ghcr.io/weaveworks/wego-app:v0.35.0
         imagePullPolicy: IfNotPresent
+        args:
+        - "--insecure"
+        - "--log-level=info"
         ports:
         - name: http
           containerPort: 9001
