@@ -97,27 +97,11 @@ subjects:
   name: weave-gitops
   namespace: weave-gitops
 ---
-apiVersion: v1
-kind: Secret
-metadata:
-  name: cluster-user-auth
-  namespace: weave-gitops
-type: Opaque
-stringData:
-  username: admin
-  # Password hash for: admin123
-  # Generated with: gitops get bcrypt-hash
-  password: $2a$10$PplGJPLExfkcFGHTvD.eQ.D49T4lKROkK/H8N0kP.Vu4BQKuH3QyC
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: weave-gitops-admin-password
-  namespace: weave-gitops
-type: Opaque
-stringData:
-  username: admin
-  password: admin123  # Change this password!
+# Secrets are now managed by External Secrets Operator
+# See external-secret.yaml for configuration
+# Secrets will be created from Google Secret Manager:
+# - cluster-user-auth
+# - weave-gitops-admin-password
 ---
 apiVersion: apps/v1
 kind: Deployment
