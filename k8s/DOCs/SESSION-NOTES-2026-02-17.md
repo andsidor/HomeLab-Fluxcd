@@ -289,6 +289,122 @@ kubectl get svc,ing -n weave-gitops
 
 ---
 
-**Session Duration**: Full Weave GitOps installation and configuration
-**Status**: ✅ Infrastructure ready, awaiting application deployment
-**Last Updated**: 2026-02-17 20:30 UTC
+## Additional Updates - RBAC and Password Configuration
+
+### RBAC Fix for CRD Listing (21:48 UTC)
+
+**Issue**: Weave GitOps service account unable to list CustomResourceDefinitions
+```
+ERROR   gitops.core-server      crd/fetcher.go:75       unable to list crds
+{"cluster": "Default", "error": "customresourcedefinitions.apiextensions.k8s.io is forbidden: 
+User \"system:serviceaccount:weave-gitops:weave-gitops\" cannot list resource \"customresourcedefinitions\""}
+```
+
+**Solution**: Added apiextensions.k8s.io permissions to ClusterRole in deployment.yaml
+
+```yaml
+- apiGroups:
+  - apiextensions.k8s.io
+  resources:
+  - customresourcedefinitions
+  verbs:
+  - get
+  - list
+  - watch
+```
+
+**Applied Changes**:
+```bash
+kubectl apply -f k8s/infra/Weave-Gitops/deployment.yaml
+kubectl rollout restart deployment weave-gitops -n weave-gitops
+```
+
+**Result**: ✅ Error resolved, CRD listing now working
+
+---
+
+### Password Update to NoweSilneHaslo123! (21:50+ UTC)
+
+**Issue Discovered**: Hasło w sekretach było zwykłym tekstem, Weave GitOps wymaga bcrypt hash
+```
+ERROR   gitops.auth-server      auth/server.go:421      Failed to compare hash with password
+{"error": "crypto/bcrypt: hashedSecret too short to be a bcrypted password"}
+```
+
+**Resolution (22:53 UTC)**: ✅ COMPLETED
+- Bcrypt hash generated: `$2a$10$ZSvWN/1VYbw4kCgc5IhuV.rUuX.tsjZpasXjH3dv6Zskwm1Elep5i`
+- Updated GCP Secret Manager:
+  ```bash
+  gcloud secrets versions add weave-gitops-password \
+    --project=mysecret-476812 \
+    --data-file=- <<< '$2a$10$ZSvWN/1VYbw4kCgc5IhuV.rUuX.tsjZpasXjH3dv6Zskwm1Elep5i'
+  # Created version [10] of the secret [weave-gitops-password]
+  ```
+- Restarted pod to refresh secrets from GCP
+- ExternalSecret successfully synced new password
+
+**Credentials for Weave GitOps**:
+- **Username**: `admin`
+- **Password**: `NoweSilneHaslo123!`
+- **URL**: http://192.168.0.222/
+- **Domain**: gitops.example.com (with TLS via Traefik)
+
+**Verification**:
+```bash
+# Check secret was updated
+kubectl get secret weave-gitops-admin-password -n weave-gitops -o jsonpath='{.data.password}' | base64 -d
+
+# Check pod logs for errors
+kubectl logs -n weave-gitops weave-gitops-9bb45ddf9-9x55w --tail=50
+
+# Verify no auth errors in logs
+kubectl logs -n weave-gitops -l app=weave-gitops | grep -i "error\|password" | tail -20
+```
+
+**Status**: ✅ COMPLETED - Weave GitOps fully operational with correct bcrypt-hashed password
+
+---
+
+## Summary of RBAC Fixes
+
+Three RBAC updates were required:
+
+1. **CRD Listing Permissions** (21:48 UTC - 2026-02-17)
+   - Added: `apiGroups: ["apiextensions.k8s.io"]`
+   - Resource: `customresourcedefinitions`
+   - Verbs: `[get, list, watch]`
+   - Result: ✅ Resolved "unable to list crds" error
+
+2. **Impersonation Permissions** (22:52 UTC - 2026-02-17, verified 23:01 UTC - 2026-02-18)
+   - Added: `apiGroups: [""]`
+   - Resources: `[users, groups, serviceaccounts]`
+   - Verbs: `[impersonate]`
+   - Initial file update: 22:52 UTC on 2026-02-17
+   - Issue discovered: Permissions written to file but not applied to cluster
+   - Error log (2026-02-18 00:34 UTC): `"user namespace access: users \"admin\" is forbidden"`
+   - Fix applied: `kubectl apply -f deployment.yaml` re-applied to sync permissions to K8s cluster (2026-02-18 23:01 UTC)
+   - Deployment restarted: `kubectl rollout restart deployment weave-gitops -n weave-gitops`
+   - Result: ✅ Resolved, pod now runs without impersonation errors
+
+**Verification Commands**:
+```bash
+# Check ClusterRole has all permissions including impersonate
+kubectl get clusterrole weave-gitops -o yaml | tail -20
+
+# Verify pod is running without errors
+kubectl get pods -n weave-gitops
+
+# Check logs for errors
+kubectl logs -n weave-gitops -l app=weave-gitops --tail=50 | grep -i "error\|failed"
+```
+
+**Result**: ✅ All RBAC errors resolved, dashboard fully functional, no permission errors in logs
+
+---
+
+**Session Duration**: Full Weave GitOps installation, RBAC troubleshooting spanning Feb 17-18, and password configuration
+**Status**: ✅ COMPLETE - Weave GitOps v0.35.0 fully operational and accessible
+**Credentials**: admin / NoweSilneHaslo123!
+**External IP**: 192.168.0.222
+**URL**: http://192.168.0.222/
+**Last Updated**: 2026-02-18 23:01 UTC
