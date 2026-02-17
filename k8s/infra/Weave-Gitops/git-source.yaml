@@ -1,25 +1,13 @@
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: GitRepository
-metadata:
-  name: weaveworks
-  namespace: weave-gitops
-spec:
-  interval: 5m
-  url: https://github.com/weaveworks/weave-gitops
-  ref:
-    tag: v0.35.0
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: weave-gitops-install
-  namespace: weave-gitops
-spec:
-  interval: 5m
-  sourceRef:
-    kind: GitRepository
-    name: weaveworks
-    namespace: weave-gitops
-  path: ./config/default
-  prune: true
-  wait: true
+# Installation Methods for Weave GitOps
+#
+# Method 1: Using Weave GitOps CLI (Recommended)
+# curl --silent --location "https://github.com/weaveworks/weave-gitops/releases/download/v0.35.0/weave-gitops-$(uname)-$(uname -m)" -o weave-gitops
+# chmod +x weave-gitops
+# ./weave-gitops gitops install --export
+#
+# Method 2: Using Helm (with proper image registry access)
+# helm repo add weave-gitops https://charts.weave.works
+# helm repo update
+# helm install weave-gitops weave-gitops/weave-gitops -n weave-gitops
+#
+# Method 3: Manual Installation (see README.md)

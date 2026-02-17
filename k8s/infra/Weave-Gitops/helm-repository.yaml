@@ -1,2 +1,12 @@
-# Weave GitOps uses direct deployment instead of Helm due to chart repository accessibility
-# Using Kustomize with manifests from Weave GitOps GitHub repository
+# Weave GitOps Helm Repository Configuration
+# Note: Chart repository requires proper authentication in some environments
+# Alternative installation methods available in README.md
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: weave-gitops
+  namespace: weave-gitops
+spec:
+  interval: 10m
+  url: oci://ghcr.io/weaveworks/charts
+  type: oci
