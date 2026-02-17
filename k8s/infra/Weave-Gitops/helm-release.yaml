@@ -16,7 +16,7 @@ spec:
       serviceAccountName: weave-gitops
       containers:
       - name: weave-gitops
-        image: ghcr.io/weaveworks/weave-gitops:latest
+        image: docker.io/weaveworks/weave-gitops:v0.30.0
         ports:
         - name: http
           containerPort: 8080

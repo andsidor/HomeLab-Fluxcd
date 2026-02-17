@@ -1,0 +1,25 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: weaveworks
+  namespace: weave-gitops
+spec:
+  interval: 5m
+  url: https://github.com/weaveworks/weave-gitops
+  ref:
+    tag: v0.35.0
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: weave-gitops-install
+  namespace: weave-gitops
+spec:
+  interval: 5m
+  sourceRef:
+    kind: GitRepository
+    name: weaveworks
+    namespace: weave-gitops
+  path: ./config/default
+  prune: true
+  wait: true
