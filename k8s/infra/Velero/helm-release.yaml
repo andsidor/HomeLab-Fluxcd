@@ -50,7 +50,7 @@ spec:
       # Backup schedule and retention
       schedules:
         daily-backup:
-          schedule: "0 2 * * *"  # 2 AM daily
+          schedule: "04 22 * * *"  # 2 AM daily
           template:
             ttl: "72h"  # 30 days retention
             includedNamespaces:
