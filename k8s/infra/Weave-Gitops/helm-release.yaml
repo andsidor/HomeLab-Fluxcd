@@ -25,15 +25,14 @@ spec:
     service:
       type: ClusterIP
       port: 80
-    # Enable ingress if you want to expose Weave GitOps externally
-    # ingress:
-    #   enabled: true
-    #   className: traefik
-    #   hosts:
-    #     - host: gitops.example.com
-    #       paths:
-    #         - path: /
-    #           pathType: Prefix
-    #   annotations:
-    #     cert-manager.io/cluster-issuer: letsencrypt-prod
-    #     traefik.ingress.kubernetes.io/router.tls.certresolver: letsencrypt
+    ingress:
+      enabled: true
+      className: traefik
+      hosts:
+        - host: gitops.example.com
+          paths:
+            - path: /
+              pathType: Prefix
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+        traefik.ingress.kubernetes.io/router.tls.certresolver: letsencrypt
