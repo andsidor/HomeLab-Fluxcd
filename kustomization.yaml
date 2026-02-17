@@ -8,6 +8,7 @@ resources:
   - k8s/infra/ESO
   - k8s/infra/Prometheus
   - k8s/infra/Loki
+  - k8s/infra/Headlamp
   - k8s/infra/Longhorn
 
   - k8s/infra/MetalLB
