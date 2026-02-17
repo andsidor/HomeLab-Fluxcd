@@ -1,8 +1,2 @@
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: HelmRepository
-metadata:
-  name: weave-gitops
-  namespace: weave-gitops
-spec:
-  interval: 1h
-  url: https://charts.weave.works
+# Weave GitOps uses direct deployment instead of Helm due to chart repository accessibility
+# Using Kustomize with manifests from Weave GitOps GitHub repository
