@@ -8,67 +8,12 @@ NOTES
 
 
 
-<pre> ```        _,met$$$$$gg.          sidor@node1
-     ,g$$$$$$$$$$$$$$$P.       -----------
-   ,g$$P""       """Y$$.".     OS: Debian GNU/Linux 13 (trixie) x86_64
-  ,$$P'              `$$$.     Host: HP t620 Quad Core TC
-',$$P       ,ggs.     `$$b:    Kernel: Linux 6.12.63+deb13-amd64
-`d$$'     ,$P"'   .    $$$     Uptime: 16 days, 23 hours, 27 mins
- $$P      d$'     ,    $$P     Packages: 1601 (dpkg)
- $$:      $$.   -    ,d$$'     Shell: bash 5.2.37
- $$;      Y$b._   _,d$P'       Cursor: Adwaita
- Y$$.    `.`"Y$$$$P"'          Terminal: /dev/pts/0
- `$$b      "-.__               CPU: AMD GX-415GA SOC with Radeon(tm) HD Graphics (4) @ 1.50 GHz
-  `Y$$b                        GPU: AMD Radeon HD 8330E [Discrete]
-   `Y$$.                       Memory: 3.01 GiB / 7.20 GiB (42%)
-     `$$b.                     Swap: Disabled
-       `Y$$b.                  Disk (/): 20.51 GiB / 109.81 GiB (19%) - ext4
-         `"Y$b._               Local IP (enp2s0): 192.168.0.111/24
-             `""""             Locale: pl_PL.UTF-8 ``` </pre>
+
 
 
 <img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/19778977-3db7-4500-95f4-76b49a4fd3cb" />
 
-        _,met$$$$$gg.
-     ,g$$$$$$$$$$$$$$$P.
-   ,g$$P""       """Y$$.".
-  ,$$P'              `$$$.
-',$$P       ,ggs.     `$$b:
-`d$$'     ,"'   .    $$$
- $$P      d     ,    $$P
- $$:      $   -    ,d$$'
- $$;      Y._   _,d'
- Y$$.    `.`"Y$$$$P"'
- `$$b      "-.__
-  `Y$$b
-   `Y$$.
-     `$$b.
-       `Y$$b.
-         `"Y$b._
-             `""""^[[1G^[[16A^[[31Csidor@debian
-^[[31C------------
-^[[31COS: Debian GNU/Linux 13 (trixie) x86_64
-^[[31CHost: Latitude 5480
-^[[31CKernel: Linux 6.12.63+deb13-amd64
-^[[31CUptime: 9 days, 22 hours, 23 mins
-^[[31CPackages: 1608 (dpkg)
-^[[31CShell: bash 5.2.37
-^[[31CDisplay (IVO057E): 1366x768 @ 60 Hz in 14" [Built-in]
-^[[31CCursor: Adwaita
-^[[31CTerminal:
-^[[31CCPU: Intel(R) Core(TM) i5-6300U (4) @ 3.00 GHz
-^[[31CGPU: Intel HD Graphics 520 @ 1.00 GHz [Integrated]
-^[[31CMemory: 8.78 GiB / 15.26 GiB (58%)
-^[[31CSwap: Disabled
-^[[31CDisk (/): 27.06 GiB / 221.75 GiB (12%) - ext4
-^[[31CLocal IP (enp0s31f6): 192.168.0.110/24
-^[[31CBattery (DELL GD1JP65): 100% [AC Connected]
-^[[31CLocale: pl_PL.UTF-8
-^[[31C
-^[[31C^[[40m   ^[[41m   ^[[42m   ^[[43m   ^[[44m   ^[[45m   ^[[46m   ^[[47m   ^[[m
-^[[31C^[[100m   ^[[101m   ^[[102m   ^[[103m   ^[[104m   ^[[105m   ^[[106m   ^[[107m   ^[[m
-<img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/8068c12d-4037-4c3d-a58c-2a728b2c47b4" />
-        _,met$$$$$gg.          sidor@node1
+<pre>         _,met$$$$$gg.          sidor@node1
      ,g$$$$$$$$$$$$$$$P.       -----------
    ,g$$P""       """Y$$.".     OS: Debian GNU/Linux 13 (trixie) x86_64
   ,$$P'              `$$$.     Host: HP t620 Quad Core TC
@@ -84,9 +29,32 @@ NOTES
      `$$b.                     Swap: Disabled
        `Y$$b.                  Disk (/): 20.51 GiB / 109.81 GiB (19%) - ext4
          `"Y$b._               Local IP (enp2s0): 192.168.0.111/24
-             `""""             Locale: pl_PL.UTF-8
+             `""""             Locale: pl_PL.UTF-8  </pre>
+
+
+<img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/8068c12d-4037-4c3d-a58c-2a728b2c47b4" />
+
+<pre>           _,met$$$$$gg.          sidor@node1
+     ,g$$$$$$$$$$$$$$$P.       -----------
+   ,g$$P""       """Y$$.".     OS: Debian GNU/Linux 13 (trixie) x86_64
+  ,$$P'              `$$$.     Host: HP t620 Quad Core TC
+',$$P       ,ggs.     `$$b:    Kernel: Linux 6.12.63+deb13-amd64
+`d$$'     ,$P"'   .    $$$     Uptime: 16 days, 23 hours, 27 mins
+ $$P      d$'     ,    $$P     Packages: 1601 (dpkg)
+ $$:      $$.   -    ,d$$'     Shell: bash 5.2.37
+ $$;      Y$b._   _,d$P'       Cursor: Adwaita
+ Y$$.    `.`"Y$$$$P"'          Terminal: /dev/pts/0
+ `$$b      "-.__               CPU: AMD GX-415GA SOC with Radeon(tm) HD Graphics (4) @ 1.50 GHz
+  `Y$$b                        GPU: AMD Radeon HD 8330E [Discrete]
+   `Y$$.                       Memory: 3.01 GiB / 7.20 GiB (42%)
+     `$$b.                     Swap: Disabled
+       `Y$$b.                  Disk (/): 20.51 GiB / 109.81 GiB (19%) - ext4
+         `"Y$b._               Local IP (enp2s0): 192.168.0.111/24
+             `""""             Locale: pl_PL.UTF-8         </pre>
+
 <img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/372eb195-733a-47c2-8e5e-259e984e58ec" />
-        _,met$$$$$gg.          sidor@node2
+
+<pre>          _,met$$$$$gg.          sidor@node2
      ,g$$$$$$$$$$$$$$$P.       -----------
    ,g$$P""       """Y$$.".     OS: Debian GNU/Linux 13 (trixie) x86_64
   ,$$P'              `$$$.     Host: HP t620 Dual Core TC
@@ -102,7 +70,8 @@ NOTES
      `$$b.                     Swap: Disabled
        `Y$$b.                  Disk (/): 22.22 GiB / 109.81 GiB (20%) - ext4
          `"Y$b._               Local IP (enp1s0): 192.168.0.112/24
-             `""""             Locale: pl_PL.UTF-8
+             `""""             Locale: pl_PL.UTF-8          </pre>
+
 
 
 
