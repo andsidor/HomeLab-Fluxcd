@@ -1,0 +1,60 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: cilium
+  namespace: kube-system
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: cilium
+      sourceRef:
+        kind: HelmRepository
+        name: cilium
+        namespace: flux-system
+      version: "1.18.x"
+  values:
+    cluster:
+      name: kubernetes
+    k8sServiceHost: 192.168.0.110
+    k8sServicePort: 6443
+    kubeProxyReplacement: true
+    operator:
+      replicas: 1
+    routingMode: tunnel
+    tunnelProtocol: vxlan
+    
+    # Hubble observability configuration
+    hubble:
+      enabled: true
+      relay:
+        enabled: true
+        replicas: 1
+      ui:
+        enabled: true
+        replicas: 1
+        ingress:
+          enabled: false
+      metrics:
+        enabled:
+          - dns:domainNames
+          - drop
+          - flow
+          - flows-to-world
+          - httpRequests
+          - icmp
+    
+    # Ensure proper initialization order
+    autoscaling:
+      enabled: false
+  
+  install:
+    crds: Create
+    remediation:
+      retries: 3
+  
+  upgrade:
+    crds: Create
+    remediation:
+      retries: 3
