@@ -35,7 +35,10 @@ spec:
         enabled: true
         replicas: 1
         ingress:
-          enabled: false
+          enabled: true
+          className: traefik
+          hosts:
+            - hubble.andrzejsidor.online
       metrics:
         enabled:
           - dns:domainNames
