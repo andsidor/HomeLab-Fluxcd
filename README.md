@@ -143,18 +143,18 @@ More information can be found in [the roadmap](#roadmap) below.
 ### Features
 
 - [x] Common applications: Gitea, Jellyfin, Paperless...
-- [x] Automated bare metal provisioning with PXE boot
-- [x] Automated Kubernetes installation and management
+- [x] Automated bare metal provisioning with PXE boot METALL BL
+- [] Automated Kubernetes installation and management
 - [x] Installing and managing applications using GitOps
 - [x] Automatic rolling upgrade for OS and Kubernetes
 - [x] Automatically update apps (with approval)
 - [x] Modular architecture, easy to add or remove features/components
-- [x] Automated certificate management
+- [] Automated certificate management
 - [x] Automatically update DNS records for exposed services
-- [x] VPN (Tailscale or Wireguard)
+- [] VPN (Tailscale or Wireguard)
 - [x] Expose services to the internet securely with [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/)
-- [x] CI/CD platform
-- [x] Private container registry
+- [] CI/CD platform
+- [] Private container registry
 - [x] Distributed storage
 - [x] Support multiple environments (dev, prod)
 - [x] Monitoring and alerting
@@ -171,7 +171,11 @@ They can't capture all the project's features, but they are sufficient to get a 
 | Deploy with a single command (after updating the configuration files)                                           |
 | [![][pxe-demo]](https://www.youtube.com/watch?v=y-d7btNNAT8)                                                    |
 | PXE boot                                                                                                        |
-| [![][hubble-demo]][hubble-demo]                                                                                 |
+| [![][hubble-demo]][hubble-demo]   
+xxxx
+
+
+|
 | Observe network traffic with Hubble, built on top of [Cilium](https://cilium.io) and eBPF                       |
 | [![][homepage-demo]][homepage-demo]                                                                             |
 | Homepage powered by... [Homepage](https://gethomepage.dev)                                                      |
@@ -185,10 +189,6 @@ They can't capture all the project's features, but they are sufficient to get a 
 | Continuous integration with [Woodpecker CI](https://woodpecker-ci.org)                                          |
 | [![][argocd-demo]][argocd-demo]                                                                                 |
 | Continuous deployment with [ArgoCD](https://argoproj.github.io/cd)                                              |
-| [![][alert-demo]][alert-demo]                                                                                   |
-| [ntfy](https://ntfy.sh) displaying received alerts                                                              |
-| [![][ai-demo]][ai-demo]                                                                                         |
-| Self-hosted AI powered by [Ollama](https://ollama.com) (experimental, not very fast because I don't have a GPU) |
 
 [deploy-demo]: https://asciinema.org/a/xkBRkwC6e9RAzVuMDXH3nGHp7.svg
 [pxe-demo]: https://user-images.githubusercontent.com/27996771/157303477-df2e7410-8f02-4648-a86c-71e6b7e89e35.png
@@ -217,7 +217,7 @@ They can't capture all the project's features, but they are sufficient to get a 
     </tr>
     <tr>
         <td><img width="32" src="https://avatars.githubusercontent.com/u/30269780"></td>
-        <td><a href="https://argoproj.github.io/cd">ArgoCD</a></td>
+        <td><a href="https://argoproj.github.io/cd">FLUXXXXXXXXXXXXXXXXXXX</a></td>
         <td>GitOps tool built to deploy applications to Kubernetes</td>
     </tr>
     <tr>
