@@ -179,13 +179,10 @@ xxxx
 | [![][homepage-demo]][homepage-demo]                                                                             |
 | Homepage powered by... [Homepage](https://gethomepage.dev)                                                      |
 | [![][grafana-demo]][grafana-demo]                                                                               |
-| Monitoring dashboard powered by [Grafana](https://grafana.com)                                                  |
-| [![][gitea-demo]][gitea-demo]                                                                                   |
-| Git server powered by [Gitea](https://gitea.io/en-us)                                                           |
-| [![][matrix-demo]][matrix-demo]                                                                                 |
-| [Matrix](https://matrix.org/) chat server                                                                       |
-| [![][woodpecker-demo]][woodpecker-demo]                                                                         |
-| Continuous integration with [Woodpecker CI](https://woodpecker-ci.org)                                          |
+| Monitoring dashboard powered by [Grafana](https://grafana.com)  
+XXXXX
+
+
 | [![][argocd-demo]][argocd-demo]                                                                                 |
 | Continuous deployment with [ArgoCD](https://argoproj.github.io/cd)                                              |
 
@@ -338,29 +335,21 @@ xxxx
 
 ## Get Started
 
-- [Try it out locally](https://homelab.khuedoan.com/installation/sandbox) without any hardware (just 4 commands!)
-- [Deploy on real hardware](https://homelab.khuedoan.com/installation/production/prerequisites) for production workload
 
 ## Roadmap
 
-See [roadmap](https://homelab.khuedoan.com/reference/roadmap) and [open issues](https://github.com/khuedoan/homelab/issues) for a list of proposed features and known issues.
-
 ## Contributing
-
-Any contributions you make are greatly appreciated.
-
-Please see [contributing guide](https://homelab.khuedoan.com/reference/contributing) for more information.
 
 ## License
 
-Copyright &copy; 2020 - 2024 Khue Doan
+Copyright &copy; 2020 - 2026
 
 Distributed under the GPLv3 License.
 See [license page](https://homelab.khuedoan.com/reference/license) or `LICENSE.md` file for more information.
 
 ## Acknowledgements
 
-References:
+References blof Links:
 
 - [Ephemeral PXE server inspired by Minimal First Machine in the DC](https://speakerdeck.com/amcguign/minimal-first-machine-in-the-dc)
 - [ArgoCD usage and monitoring configuration in locmai/humble](https://github.com/locmai/humble)
