@@ -34,6 +34,8 @@ spec:
       ui:
         enabled: true
         replicas: 1
+        service:
+          type: LoadBalancer
         ingress:
           enabled: true
           className: traefik
