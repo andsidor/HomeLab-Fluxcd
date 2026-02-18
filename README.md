@@ -8,7 +8,23 @@ NOTES
 
 
 
-
+<pre> ```        _,met$$$$$gg.          sidor@node1
+     ,g$$$$$$$$$$$$$$$P.       -----------
+   ,g$$P""       """Y$$.".     OS: Debian GNU/Linux 13 (trixie) x86_64
+  ,$$P'              `$$$.     Host: HP t620 Quad Core TC
+',$$P       ,ggs.     `$$b:    Kernel: Linux 6.12.63+deb13-amd64
+`d$$'     ,$P"'   .    $$$     Uptime: 16 days, 23 hours, 27 mins
+ $$P      d$'     ,    $$P     Packages: 1601 (dpkg)
+ $$:      $$.   -    ,d$$'     Shell: bash 5.2.37
+ $$;      Y$b._   _,d$P'       Cursor: Adwaita
+ Y$$.    `.`"Y$$$$P"'          Terminal: /dev/pts/0
+ `$$b      "-.__               CPU: AMD GX-415GA SOC with Radeon(tm) HD Graphics (4) @ 1.50 GHz
+  `Y$$b                        GPU: AMD Radeon HD 8330E [Discrete]
+   `Y$$.                       Memory: 3.01 GiB / 7.20 GiB (42%)
+     `$$b.                     Swap: Disabled
+       `Y$$b.                  Disk (/): 20.51 GiB / 109.81 GiB (19%) - ext4
+         `"Y$b._               Local IP (enp2s0): 192.168.0.111/24
+             `""""             Locale: pl_PL.UTF-8 ``` </pre>
 
 
 <img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/19778977-3db7-4500-95f4-76b49a4fd3cb" />
