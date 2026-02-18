@@ -12,6 +12,8 @@ NOTES
 
 
 <img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/19778977-3db7-4500-95f4-76b49a4fd3cb" />
+
+'''
         _,met$$$$$gg.          sidor@debian
      ,g$$$$$$$$$$$$$$$P.       ------------
    ,g$$P""       """Y$$.".     OS: Debian GNU/Linux 13 (trixie) x86_64
@@ -30,6 +32,7 @@ NOTES
          `"Y$b._               Local IP (enp0s31f6): 192.168.0.110/24
              `""""             Battery (DELL GD1JP65): 100% [AC Connected]
                                Locale: pl_PL.UTF-8
+                               '''
 <img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/8068c12d-4037-4c3d-a58c-2a728b2c47b4" />
         _,met$$$$$gg.          sidor@node1
      ,g$$$$$$$$$$$$$$$P.       -----------
