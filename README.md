@@ -1,8 +1,5 @@
 
-
-
-NOTES
-
+Homelab description:
 <img width="626" height="598" alt="obraz" src="https://github.com/user-attachments/assets/5e19c477-bf71-4706-af6e-632862b2d892" />
 
 
