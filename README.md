@@ -13,26 +13,44 @@ NOTES
 
 <img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/19778977-3db7-4500-95f4-76b49a4fd3cb" />
 
-'''
-        _,met$$$$$gg.          sidor@debian<br>
-     ,g$$$$$$$$$$$$$$$P.       ------------<br>
-   ,g$$P""       """Y$$.".     OS: Debian GNU/Linux 13 (trixie) x86_64<br>
-  ,$$P'              `$$$.     Host: Latitude 5480<br>
-',$$P       ,ggs.     `$$b:    Kernel: Linux 6.12.63+deb13-amd64<br>
-`d$$'     ,$P"'   .    $$$     Uptime: 9 days, 22 hours, 16 mins<br>
- $$P      d$'     ,    $$P     Packages: 1608 (dpkg)<br>
- $$:      $$.   -    ,d$$'     Shell: bash 5.2.37<br>
- $$;      Y$b._   _,d$P'       Cursor: Adwaita<br>
- Y$$.    `.`"Y$$$$P"'          Terminal: /dev/pts/1<br>
- `$$b      "-.__               CPU: Intel(R) Core(TM) i5-6300U (4) @ 3.00 GHz <br>
-  `Y$$b                        GPU: Intel HD Graphics 520 @ 1.00 GHz [Integrated] <br>
-   `Y$$.                       Memory: 8.97 GiB / 15.26 GiB (59%) <br>
-     `$$b.                     Swap: Disabled <br>
-       `Y$$b.                  Disk (/): 27.06 GiB / 221.75 GiB (12%) - ext4 <br>
-         `"Y$b._               Local IP (enp0s31f6): 192.168.0.110/24 <br>
-             `""""             Battery (DELL GD1JP65): 100% [AC Connected] <br>
-                               Locale: pl_PL.UTF-8 <br>
-                               '''
+        _,met$$$$$gg.
+     ,g$$$$$$$$$$$$$$$P.
+   ,g$$P""       """Y$$.".
+  ,$$P'              `$$$.
+',$$P       ,ggs.     `$$b:
+`d$$'     ,"'   .    $$$
+ $$P      d     ,    $$P
+ $$:      $   -    ,d$$'
+ $$;      Y._   _,d'
+ Y$$.    `.`"Y$$$$P"'
+ `$$b      "-.__
+  `Y$$b
+   `Y$$.
+     `$$b.
+       `Y$$b.
+         `"Y$b._
+             `""""^[[1G^[[16A^[[31Csidor@debian
+^[[31C------------
+^[[31COS: Debian GNU/Linux 13 (trixie) x86_64
+^[[31CHost: Latitude 5480
+^[[31CKernel: Linux 6.12.63+deb13-amd64
+^[[31CUptime: 9 days, 22 hours, 23 mins
+^[[31CPackages: 1608 (dpkg)
+^[[31CShell: bash 5.2.37
+^[[31CDisplay (IVO057E): 1366x768 @ 60 Hz in 14" [Built-in]
+^[[31CCursor: Adwaita
+^[[31CTerminal:
+^[[31CCPU: Intel(R) Core(TM) i5-6300U (4) @ 3.00 GHz
+^[[31CGPU: Intel HD Graphics 520 @ 1.00 GHz [Integrated]
+^[[31CMemory: 8.78 GiB / 15.26 GiB (58%)
+^[[31CSwap: Disabled
+^[[31CDisk (/): 27.06 GiB / 221.75 GiB (12%) - ext4
+^[[31CLocal IP (enp0s31f6): 192.168.0.110/24
+^[[31CBattery (DELL GD1JP65): 100% [AC Connected]
+^[[31CLocale: pl_PL.UTF-8
+^[[31C
+^[[31C^[[40m   ^[[41m   ^[[42m   ^[[43m   ^[[44m   ^[[45m   ^[[46m   ^[[47m   ^[[m
+^[[31C^[[100m   ^[[101m   ^[[102m   ^[[103m   ^[[104m   ^[[105m   ^[[106m   ^[[107m   ^[[m
 <img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/8068c12d-4037-4c3d-a58c-2a728b2c47b4" />
         _,met$$$$$gg.          sidor@node1
      ,g$$$$$$$$$$$$$$$P.       -----------
