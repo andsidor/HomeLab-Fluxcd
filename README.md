@@ -14,24 +14,24 @@ NOTES
 <img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/19778977-3db7-4500-95f4-76b49a4fd3cb" />
 
 '''
-        _,met$$$$$gg.          sidor@debian
-     ,g$$$$$$$$$$$$$$$P.       ------------
-   ,g$$P""       """Y$$.".     OS: Debian GNU/Linux 13 (trixie) x86_64
-  ,$$P'              `$$$.     Host: Latitude 5480
-',$$P       ,ggs.     `$$b:    Kernel: Linux 6.12.63+deb13-amd64
-`d$$'     ,$P"'   .    $$$     Uptime: 9 days, 22 hours, 16 mins
- $$P      d$'     ,    $$P     Packages: 1608 (dpkg)
- $$:      $$.   -    ,d$$'     Shell: bash 5.2.37
- $$;      Y$b._   _,d$P'       Cursor: Adwaita
- Y$$.    `.`"Y$$$$P"'          Terminal: /dev/pts/1
- `$$b      "-.__               CPU: Intel(R) Core(TM) i5-6300U (4) @ 3.00 GHz
-  `Y$$b                        GPU: Intel HD Graphics 520 @ 1.00 GHz [Integrated]
-   `Y$$.                       Memory: 8.97 GiB / 15.26 GiB (59%)
-     `$$b.                     Swap: Disabled
-       `Y$$b.                  Disk (/): 27.06 GiB / 221.75 GiB (12%) - ext4
-         `"Y$b._               Local IP (enp0s31f6): 192.168.0.110/24
-             `""""             Battery (DELL GD1JP65): 100% [AC Connected]
-                               Locale: pl_PL.UTF-8
+        _,met$$$$$gg.          sidor@debian<br>
+     ,g$$$$$$$$$$$$$$$P.       ------------<br>
+   ,g$$P""       """Y$$.".     OS: Debian GNU/Linux 13 (trixie) x86_64<br>
+  ,$$P'              `$$$.     Host: Latitude 5480<br>
+',$$P       ,ggs.     `$$b:    Kernel: Linux 6.12.63+deb13-amd64<br>
+`d$$'     ,$P"'   .    $$$     Uptime: 9 days, 22 hours, 16 mins<br>
+ $$P      d$'     ,    $$P     Packages: 1608 (dpkg)<br>
+ $$:      $$.   -    ,d$$'     Shell: bash 5.2.37<br>
+ $$;      Y$b._   _,d$P'       Cursor: Adwaita<br>
+ Y$$.    `.`"Y$$$$P"'          Terminal: /dev/pts/1<br>
+ `$$b      "-.__               CPU: Intel(R) Core(TM) i5-6300U (4) @ 3.00 GHz <br>
+  `Y$$b                        GPU: Intel HD Graphics 520 @ 1.00 GHz [Integrated] <br>
+   `Y$$.                       Memory: 8.97 GiB / 15.26 GiB (59%) <br>
+     `$$b.                     Swap: Disabled <br>
+       `Y$$b.                  Disk (/): 27.06 GiB / 221.75 GiB (12%) - ext4 <br>
+         `"Y$b._               Local IP (enp0s31f6): 192.168.0.110/24 <br>
+             `""""             Battery (DELL GD1JP65): 100% [AC Connected] <br>
+                               Locale: pl_PL.UTF-8 <br>
                                '''
 <img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/8068c12d-4037-4c3d-a58c-2a728b2c47b4" />
         _,met$$$$$gg.          sidor@node1
