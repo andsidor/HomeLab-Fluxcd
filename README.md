@@ -17,6 +17,19 @@ NOTES
 
 <img width="211" height="767" alt="obraz" src="https://github.com/user-attachments/assets/cf5bfece-8b15-444d-accf-96ddeb94b94d" />
 
+Headlamp
+<img width="1446" height="309" alt="obraz" src="https://github.com/user-attachments/assets/2e426d50-901b-49c1-b9f6-55638f490a71" />
+<img width="1464" height="418" alt="obraz" src="https://github.com/user-attachments/assets/78637359-cfad-45fe-9969-df5455e10fc1" />
+
+
+GRAFANA
+<img width="1435" height="780" alt="obraz" src="https://github.com/user-attachments/assets/8e3609ab-02a2-4bed-a681-e5cbf50beb7b" />
+<img width="1435" height="780" alt="obraz" src="https://github.com/user-attachments/assets/99bfc7e5-731b-49a5-b548-19792b006497" />
+<img width="1435" height="780" alt="obraz" src="https://github.com/user-attachments/assets/34e00e39-dfb3-4ed9-84bf-8101b73ea9b0" />
+
+<img width="1471" height="641" alt="obraz" src="https://github.com/user-attachments/assets/b6615a01-9b87-4f51-900c-173df628326f" />
+
+
 
 NOTES
 
