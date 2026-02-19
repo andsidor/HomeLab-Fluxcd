@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: dashy
-          image: mauricnino/dashy:latest
+          image: lissy93/dashy:latest
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
