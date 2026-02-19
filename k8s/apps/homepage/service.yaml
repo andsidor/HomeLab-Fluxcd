@@ -8,7 +8,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 3000
+    - port: 33000
       targetPort: http
       protocol: TCP
       name: http
