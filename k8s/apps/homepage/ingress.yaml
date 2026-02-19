@@ -14,7 +14,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: homepage.andrzesidor.online
+    - host: https://homepage.andrzejsidor.online/
       http:
         paths:
           - path: /
