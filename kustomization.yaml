@@ -13,6 +13,7 @@ resources:
   - k8s/infra/Longhorn
   - k8s/infra/Velero
   - k8s/infra/Weave-Gitops
+  - k8s/infra/Traefik
   - k8s/infra/MetalLB
   - k8s/apps/linkding
   - k8s/apps/linkwarden

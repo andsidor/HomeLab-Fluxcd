@@ -1,0 +1,40 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: traefik
+  namespace: traefik
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: traefik
+      sourceRef:
+        kind: HelmRepository
+        name: traefik
+        namespace: traefik
+  values:
+    service:
+      type: LoadBalancer
+    ingressClass:
+      enabled: true
+      isDefaultClass: false
+      name: traefik
+    providers:
+      kubernetesIngress:
+        ingressClass: traefik
+      kubernetesCRD:
+        ingressClass: traefik
+    ports:
+      web:
+        port: 8000
+        expose:
+          default: true
+        exposedPort: 80
+      websecure:
+        port: 8443
+        expose:
+          default: true
+        exposedPort: 443
+      traefik:
+        expose:
+          default: false
