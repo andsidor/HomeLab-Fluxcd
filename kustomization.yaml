@@ -20,4 +20,5 @@ resources:
   - k8s/apps/grafana
   - k8s/apps/dashy
   - k8s/apps/homarr
+  - k8s/apps/homepage
 
