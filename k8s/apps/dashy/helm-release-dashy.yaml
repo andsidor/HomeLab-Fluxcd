@@ -1,0 +1,75 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: dashy
+  namespace: dashy
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: app-template
+      version: '3.*'
+      sourceRef:
+        kind: HelmRepository
+        name: bjw-s
+        namespace: dashy
+  values:
+    controllers:
+      dashy:
+        containers:
+          app:
+            image:
+              repository: lissy93/dashy
+              tag: latest
+              pullPolicy: IfNotPresent
+            env:
+              NODE_ENV: production
+              PORT: "80"
+            resources:
+              requests:
+                cpu: 100m
+                memory: 256Mi
+              limits:
+                cpu: 500m
+                memory: 1Gi
+            probes:
+              liveness:
+                enabled: true
+                custom: true
+                spec:
+                  httpGet:
+                    path: /
+                    port: 80
+                  initialDelaySeconds: 30
+                  periodSeconds: 10
+              readiness:
+                enabled: true
+                custom: true
+                spec:
+                  httpGet:
+                    path: /
+                    port: 80
+                  initialDelaySeconds: 10
+                  periodSeconds: 5
+
+    service:
+      app:
+        controller: dashy
+        type: LoadBalancer
+        ports:
+          http:
+            port: 80
+            targetPort: 80
+
+    ingress:
+      app:
+        enabled: true
+        className: traefik
+        hosts:
+          - host: dashy.andrzejsidor.online
+            paths:
+              - path: /
+                pathType: Prefix
+                service:
+                  identifier: app
+                  port: http
