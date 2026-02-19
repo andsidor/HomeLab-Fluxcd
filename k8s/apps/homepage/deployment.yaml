@@ -28,7 +28,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: HOMEPAGE_ALLOWED_HOSTS
-              value: homepage.andrzesidor.online
+              value: homepage.andrzejsidor.online,192.168.0.227:3000
           ports:
             - name: http
               containerPort: 3000
