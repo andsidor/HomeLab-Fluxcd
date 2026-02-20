@@ -3,7 +3,7 @@ Homelab description: <br>
 Homelab-Fluxcd
 
 
-<img width="626" height="598" alt="obraz" src="https://github.com/user-attachments/assets/5e19c477-bf71-4706-af6e-632862b2d892" />
+<img width="1449" height="785" alt="obraz" src="https://github.com/user-attachments/assets/8e614c25-2928-4086-aa73-4bcf79a0602d" />
 
 
 
@@ -366,4 +366,8 @@ References blof Links:
 - [Self-host an automated Jellyfin media streaming stack](https://zerodya.net/self-host-jellyfin-media-streaming-stack)
 - [App Template Helm chart by bjw-s](https://bjw-s-labs.github.io/helm-charts/docs/app-template)
 - [Various application configurations in onedr0p/home-ops](https://github.com/onedr0p/home-ops)
+
+
+
+<img width="626" height="598" alt="obraz" src="https://github.com/user-attachments/assets/5e19c477-bf71-4706-af6e-632862b2d892" />
 
