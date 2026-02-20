@@ -1,5 +1,5 @@
 
-# Homelab description <br>
+# Homelab <br>
 
 I developing my Homelab with Fluxcd Gitops.
 
@@ -104,15 +104,17 @@ I developing my Homelab with Fluxcd Gitops.
 
 <img width="1435" height="780" alt="obraz" src="https://github.com/user-attachments/assets/34e00e39-dfb3-4ed9-84bf-8101b73ea9b0" />
 
-
-Headlamp
+# Headlamp Fluxcd = ArgoCD UI
 
 <img width="1446" height="309" alt="obraz" src="https://github.com/user-attachments/assets/2e426d50-901b-49c1-b9f6-55638f490a71" />
 
+## Headlamp Fluxcd 
+### Filter components
+
 <img width="1464" height="418" alt="obraz" src="https://github.com/user-attachments/assets/78637359-cfad-45fe-9969-df5455e10fc1" />
 
-
-
+## Headlamp Fluxcd 
+### Filter components and draw resources 
 
 <img width="1471" height="641" alt="obraz" src="https://github.com/user-attachments/assets/b6615a01-9b87-4f51-900c-173df628326f" />
 
