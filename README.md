@@ -12,23 +12,25 @@
 
 <img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/19778977-3db7-4500-95f4-76b49a4fd3cb" />
 
-<pre>         _,met$$$$$gg.          sidor@node1
-     ,g$$$$$$$$$$$$$$$P.       -----------
+<pre>    _,met$$$$$gg.          sidor@debian
+     ,g$$$$$$$$$$$$$$$P.       ------------
    ,g$$P""       """Y$$.".     OS: Debian GNU/Linux 13 (trixie) x86_64
-  ,$$P'              `$$$.     Host: HP t620 Quad Core TC
+  ,$$P'              `$$$.     Host: Latitude 5480
 ',$$P       ,ggs.     `$$b:    Kernel: Linux 6.12.63+deb13-amd64
-`d$$'     ,$P"'   .    $$$     Uptime: 16 days, 23 hours, 27 mins
- $$P      d$'     ,    $$P     Packages: 1601 (dpkg)
+`d$$'     ,$P"'   .    $$$     Uptime: 11 days, 22 hours, 34 mins
+ $$P      d$'     ,    $$P     Packages: 1608 (dpkg)
  $$:      $$.   -    ,d$$'     Shell: bash 5.2.37
- $$;      Y$b._   _,d$P'       Cursor: Adwaita
- Y$$.    `.`"Y$$$$P"'          Terminal: /dev/pts/0
- `$$b      "-.__               CPU: AMD GX-415GA SOC with Radeon(tm) HD Graphics (4) @ 1.50 GHz
-  `Y$$b                        GPU: AMD Radeon HD 8330E [Discrete]
-   `Y$$.                       Memory: 3.01 GiB / 7.20 GiB (42%)
-     `$$b.                     Swap: Disabled
-       `Y$$b.                  Disk (/): 20.51 GiB / 109.81 GiB (19%) - ext4
-         `"Y$b._               Local IP (enp2s0): 192.168.0.111/24
-             `""""             Locale: pl_PL.UTF-8  </pre>
+ $$;      Y$b._   _,d$P'       Display (IVO057E): 1366x768 @ 60 Hz in 14" [Built-in]
+ Y$$.    `.`"Y$$$$P"'          Cursor: Adwaita
+ `$$b      "-.__               Terminal: /dev/pts/0
+  `Y$$b                        CPU: Intel(R) Core(TM) i5-6300U (4) @ 3.00 GHz
+   `Y$$.                       GPU: Intel HD Graphics 520 @ 1.00 GHz [Integrated]
+     `$$b.                     Memory: 9.67 GiB / 15.26 GiB (63%)
+       `Y$$b.                  Swap: Disabled
+         `"Y$b._               Disk (/): 29.90 GiB / 221.75 GiB (13%) - ext4
+             `""""             Local IP (enp0s31f6): 192.168.0.110/24
+                               Battery (DELL GD1JP65): 100% [AC Connected]
+                               Locale: pl_PL.UTF-8   </pre>
 
 
 <img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/8068c12d-4037-4c3d-a58c-2a728b2c47b4" />
