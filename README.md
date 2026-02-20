@@ -7,6 +7,8 @@ I developing my Homelab with Fluxcd Gitops.
 
 <img width="1449" height="785" alt="obraz" src="https://github.com/user-attachments/assets/8e614c25-2928-4086-aa73-4bcf79a0602d" />
 
+### Master node 
+
 <img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/19778977-3db7-4500-95f4-76b49a4fd3cb" />
 
 <pre>     _,met$$$$$gg.          sidor@debian
@@ -29,6 +31,7 @@ I developing my Homelab with Fluxcd Gitops.
                                Battery (DELL GD1JP65): 100% [AC Connected]
                                Locale: pl_PL.UTF-8   </pre>
 
+### Master worker node1 
 
 <img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/8068c12d-4037-4c3d-a58c-2a728b2c47b4" />
 
@@ -49,6 +52,9 @@ I developing my Homelab with Fluxcd Gitops.
        `Y$$b.                  Disk (/): 20.51 GiB / 109.81 GiB (19%) - ext4
          `"Y$b._               Local IP (enp2s0): 192.168.0.111/24
              `""""             Locale: pl_PL.UTF-8         </pre>
+
+
+### Master worker node2
 
 <img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/372eb195-733a-47c2-8e5e-259e984e58ec" />
 
