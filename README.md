@@ -96,12 +96,11 @@ I developing my Homelab with Fluxcd Gitops.
 
 <img width="1435" height="780" alt="obraz" src="https://github.com/user-attachments/assets/8e3609ab-02a2-4bed-a681-e5cbf50beb7b" />
 
-## GRAFANA master node 2
+## GRAFANA worker node 1
 
 <img width="1435" height="780" alt="obraz" src="https://github.com/user-attachments/assets/99bfc7e5-731b-49a5-b548-19792b006497" />
 
-## GRAFANA master node 33
-
+## GRAFANA worker node 2
 
 <img width="1435" height="780" alt="obraz" src="https://github.com/user-attachments/assets/34e00e39-dfb3-4ed9-84bf-8101b73ea9b0" />
 
