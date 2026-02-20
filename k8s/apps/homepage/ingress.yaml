@@ -14,13 +14,12 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: homepage.andrzesidor.online
+    - host: home.andrzejsidor.online
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
-              service:
-                name: homepage
+              service:                name: homepage
                 port:
                   number: 3000
