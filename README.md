@@ -180,9 +180,7 @@ More information can be found in [the roadmap](#roadmap) below.
 
 Some demo videos and screenshots are shown ON BLOG.
 
-XXXXX
 
-%[argocd-demo]                                                                                 |
 | Continuous deployment with [ArgoCD](https://argoproj.github.io/cd)                                              |
 
 [deploy-demo]: https://asciinema.org/a/xkBRkwC6e9RAzVuMDXH3nGHp7.svg
