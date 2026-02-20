@@ -1,6 +1,6 @@
 
-## Homelab description: <br>
-# Homelab-Fluxcd
+# Homelab description: <br>
+## Homelab-Fluxcd
 
 
 <img width="1449" height="785" alt="obraz" src="https://github.com/user-attachments/assets/8e614c25-2928-4086-aa73-4bcf79a0602d" />
