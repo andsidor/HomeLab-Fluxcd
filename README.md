@@ -71,8 +71,8 @@
          `"Y$b._               Local IP (enp1s0): 192.168.0.112/24
              `""""             Locale: pl_PL.UTF-8          </pre>
 
-
-
+   
+######################################################################################
 
 <img width="900" height="252" alt="obraz" src="https://github.com/user-attachments/assets/77ca5d63-5df9-45f3-9fce-4c3e7aa301dc" />
 <img width="880" height="809" alt="obraz" src="https://github.com/user-attachments/assets/86371c30-7ad1-40a3-bf87-73a7d225064f" />
