@@ -149,9 +149,7 @@ If you encounter an issue, please create [a bug report](https://github.com/khued
 
 ## Overview
 
-Project status: **ALPHA**
-
-This project is still in the experimental stage, and I don't use anything critical on it.
+his project is still in the experimental stage, and I don't use anything critical on it.
 Expect breaking changes that may require a complete redeployment.
 A proper upgrade path is planned for the stable release.
 More information can be found in [the roadmap](#roadmap) below.
