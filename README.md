@@ -123,14 +123,17 @@ I developing my Homelab with Fluxcd Gitops.
 NOTES
 
 
- Khue's Homelab
+### Hardware
 
-**[Features](#features) • [Get Started](#get-started) • [Documentation](https://homelab.khuedoan.com)**
+- 4 × NEC SFF `PC-MK26ECZDR` (Japanese version of the ThinkCentre M700):
+    - CPU: `Intel Core i5-6600T @ 2.70GHz`
+    - RAM: `16GB`
+    - SSD: `128GB`
+- TP-Link `TL-SG108` switch:
+    - Ports: `8`
+    - Speed: `1000Mbps`
 
-[![tag](https://img.shields.io/github/v/tag/khuedoan/homelab?style=flat-square&logo=semver&logoColor=white)](https://github.com/khuedoan/homelab/tags)
-[![document](https://img.shields.io/website?label=document&logo=gitbook&logoColor=white&style=flat-square&url=https%3A%2F%2Fhomelab.khuedoan.com)](https://homelab.khuedoan.com)
-[![license](https://img.shields.io/github/license/khuedoan/homelab?style=flat-square&logo=gnu&logoColor=white)](https://www.gnu.org/licenses/gpl-3.0.html)
-[![stars](https://img.shields.io/github/stars/khuedoan/homelab?logo=github&logoColor=white&color=gold&style=flat-square)](https://github.com/khuedoan/homelab)
+
 
 This project utilizes [Infrastructure as Code](https://en.wikipedia.org/wiki/Infrastructure_as_code) and [GitOps](https://www.weave.works/technologies/gitops) to automate provisioning, operating, and updating self-hosted services in my homelab.
 It can be used as a highly customizable framework to build your own homelab.
@@ -142,7 +145,7 @@ It can be used as a highly customizable framework to build your own homelab.
 > [Home Operations Discord community](https://discord.gg/home-operations) (formerly known as [k8s-at-home](https://k8s-at-home.com)).
 
 If you encounter an issue, please create [a bug report](https://github.com/khuedoan/homelab/issues/new?template=bug_report.md)
-(avoid asking for support about issues specific to this project in other communication channels).
+(avoid asking for support about issues specific to this project in oXther communication channels).
 
 ## Overview
 
@@ -152,18 +155,6 @@ This project is still in the experimental stage, and I don't use anything critic
 Expect breaking changes that may require a complete redeployment.
 A proper upgrade path is planned for the stable release.
 More information can be found in [the roadmap](#roadmap) below.
-
-### Hardware
-
-![Hardware](https://user-images.githubusercontent.com/27996771/98970963-25137200-2543-11eb-8f2d-f9a2d45756ef.JPG)
-
-- 4 × NEC SFF `PC-MK26ECZDR` (Japanese version of the ThinkCentre M700):
-    - CPU: `Intel Core i5-6600T @ 2.70GHz`
-    - RAM: `16GB`
-    - SSD: `128GB`
-- TP-Link `TL-SG108` switch:
-    - Ports: `8`
-    - Speed: `1000Mbps`
 
 ### Features
 
@@ -187,29 +178,11 @@ More information can be found in [the roadmap](#roadmap) below.
 - [x] Single sign-on
 - [x] Infrastructure testing
 
-Some demo videos and screenshots are shown here.
-They can't capture all the project's features, but they are sufficient to get a concept of it.
+Some demo videos and screenshots are shown ON BLOG.
 
-| Demo                                                                                                            |
-| :--:                                                                                                            |
-| [![][deploy-demo]](https://asciinema.org/a/xkBRkwC6e9RAzVuMDXH3nGHp7)                                           |
-| Deploy with a single command (after updating the configuration files)                                           |
-| [![][pxe-demo]](https://www.youtube.com/watch?v=y-d7btNNAT8)                                                    |
-| PXE boot                                                                                                        |
-| [![][hubble-demo]][hubble-demo]   
-xxxx
-
-
-|
-| Observe network traffic with Hubble, built on top of [Cilium](https://cilium.io) and eBPF                       |
-| [![][homepage-demo]][homepage-demo]                                                                             |
-| Homepage powered by... [Homepage](https://gethomepage.dev)                                                      |
-| [![][grafana-demo]][grafana-demo]                                                                               |
-| Monitoring dashboard powered by [Grafana](https://grafana.com)  
 XXXXX
 
-
-| [![][argocd-demo]][argocd-demo]                                                                                 |
+%[argocd-demo]                                                                                 |
 | Continuous deployment with [ArgoCD](https://argoproj.github.io/cd)                                              |
 
 [deploy-demo]: https://asciinema.org/a/xkBRkwC6e9RAzVuMDXH3nGHp7.svg
