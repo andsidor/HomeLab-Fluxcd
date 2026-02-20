@@ -1,14 +1,11 @@
 
-# Homelab description: <br>
-## Homelab-Fluxcd
+# Homelab description <br>
 
+I developing my Homelab with Fluxcd Gitops.
+
+### Dashboard screen
 
 <img width="1449" height="785" alt="obraz" src="https://github.com/user-attachments/assets/8e614c25-2928-4086-aa73-4bcf79a0602d" />
-
-
-
-
-
 
 <img width="717" height="346" alt="obraz" src="https://github.com/user-attachments/assets/19778977-3db7-4500-95f4-76b49a4fd3cb" />
 
