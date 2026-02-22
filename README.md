@@ -166,6 +166,7 @@ I use it as a tool to prep to CKA Exam.
 
 Some article and screenshots on my blog.
 
+##  Blogerr Links:
 - [Kubespray Homelab K8s](https://asidor23.blogspot.com/2025/10/kubespray-homelab.html)
 - .....
 
@@ -269,9 +270,6 @@ Some article and screenshots on my blog.
     </tr>
 </table>
 
-##  Blogerr Links:
-
-- [README template](https://github.com/othneildrew/Best-README-Template)
 
 
 <img width="626" height="598" alt="obraz" src="https://github.com/user-attachments/assets/5e19c477-bf71-4706-af6e-632862b2d892" />
