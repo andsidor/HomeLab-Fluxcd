@@ -189,6 +189,17 @@ Some article and screenshots on my blog.
         <td>GitOps tool built to deploy applications to Kubernetes</td>
     </tr>
     <tr>
+        <td><img width="32" src="https://avatars.githubusercontent.com/external-secrets"></td>
+        <td><a href="https://external-secrets.io/latest/">External Secret Operatorr</a></td>
+        <td>Cloud native certificate management</td>
+    </tr>   
+    <tr>
+        <td><img width="32" src="https://avatars.githubusercontent.com/GoogleCloudPlatform"></td>
+        <td><a href="https://cloud.google.com/security/products/secret-manager?hl=pl">Google Secret Manager</a></td>
+        <td>Google Cloud native secret Manager management</td>
+    </tr>
+    
+    <tr>
         <td><img width="32" src="https://github.com/jetstack/cert-manager/raw/master/logo/logo.png"></td>
         <td><a href="https://cert-manager.io">cert-manager</a></td>
         <td>Cloud native certificate management</td>
@@ -235,8 +246,8 @@ Some article and screenshots on my blog.
     </tr>
     <tr>
         <td><img width="32" src="https://docs.renovatebot.com/assets/images/logo.png"></td>
-        <td><a href="https://www.whitesourcesoftware.com/free-developer-tools/renovate">Renovate tbd</a></td>
-        <td>Automatically update dependencies</td>
+        <td><a href="https://www.whitesourcesoftware.com/free-developer-tools/renovate">Renovate</a></td>
+        <td>Automatically update dependencies -tbd </td>
     </tr>
 </table>
 
