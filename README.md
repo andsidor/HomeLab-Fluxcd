@@ -125,13 +125,19 @@ NOTES
 
 ### Hardware
 
-- 4 × NEC SFF `PC-MK26ECZDR` (Japanese version of the ThinkCentre M700):
-    - CPU: `Intel Core i5-6600T @ 2.70GHz`
+- 1 × DELL Latitude 5480:
+    - CPU: `Intel(R) Core(TM) i5-6300U (4) @ 3.00 GHz`
     - RAM: `16GB`
+    - SSD: `256GB`
+ 
+- 2 × HP t620 Quad Core TC:
+    - CPU: `AMD GX-217GA SOC with Radeon(tm) HD Graphics (2) @ 1.65 GHz`
+    - RAM: `8GB`
     - SSD: `128GB`
+
 - TP-Link `TL-SG108` switch:
-    - Ports: `8`
-    - Speed: `1000Mbps`
+    - Ports: `4`
+    - Speed: `100Mbps`
 
 
 
@@ -155,6 +161,9 @@ A proper upgrade path is planned for the stable release.
 More information can be found in [the roadmap](#roadmap) below.
 
 ### Features
+
+
+
 
 - [x] Common applications: Gitea, Jellyfin, Paperless...
 - [x] Automated bare metal provisioning with PXE boot METALL BL
