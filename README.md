@@ -198,7 +198,6 @@ Some article and screenshots on my blog.
         <td><a href="https://cloud.google.com/security/products/secret-manager?hl=pl">Google Secret Manager</a></td>
         <td>Google Cloud native secret Manager management</td>
     </tr>
-    
     <tr>
         <td><img width="32" src="https://github.com/jetstack/cert-manager/raw/master/logo/logo.png"></td>
         <td><a href="https://cert-manager.io">cert-manager</a></td>
