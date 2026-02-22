@@ -146,12 +146,9 @@ It can be used as a highly customizable framework to build your own homelab.
 > For more information, please see the [r/homelab introduction](https://www.reddit.com/r/homelab/wiki/introduction) and the
 > [Home Operations Discord community](https://discord.gg/home-operations) (formerly known as [k8s-at-home](https://k8s-at-home.com)).
 
-If you encounter an issue, please create [a bug report](https://github.com/khuedoan/homelab/issues/new?template=bug_report.md)
-(avoid asking for support about issues specific to this project in oXther communication channels).
-
 ## Overview
 
-his project is still in the experimental stage, and I don't use anything critical on it.
+This project is still in the experimental stage, and I don't use anything critical on it.
 Expect breaking changes that may require a complete redeployment.
 I use it as a tool to prep to CKA Exam.
 
@@ -169,8 +166,8 @@ I use it as a tool to prep to CKA Exam.
 
 Some article and screenshots on my blog.
 
-
-
+- [Kubespray Homelab K8s](https://asidor23.blogspot.com/2025/10/kubespray-homelab.html)
+- .....
 
 ### Tech stack
 
