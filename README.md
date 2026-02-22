@@ -1,11 +1,28 @@
 
 # Homelab <br>
 
-I developing my Homelab with Fluxcd Gitops.
+I developing my Homelab. I build Kubernetes K8s on Debian Server. I choose it due to stability.
+To manage K8s, I selected Flux Cd - GitOps. All cluster resourves are installed by Flux.
+To achive simialar UX to ArgoCD, I set up Headlamp.
+TO Git To vith Fluxcd Gitops. To visualize simi
 
 ### Dashboard screen
 
 <img width="1449" height="785" alt="obraz" src="https://github.com/user-attachments/assets/8e614c25-2928-4086-aa73-4bcf79a0602d" />
+
+### Hardware
+
+- 1 × DELL Latitude 5480:
+    - CPU: `Intel(R) Core(TM) i5-6300U (4) @ 3.00 GHz`
+    - RAM: `16GB`
+    - SSD: `256GB`
+- 2 × HP t620 Quad Core TC:
+    - CPU: `AMD GX-217GA SOC with Radeon(tm) HD Graphics (2) @ 1.65 GHz`
+    - RAM: `8GB`
+    - SSD: `128GB`
+- TP-Link `TL-SG108` switch:
+    - Ports: `4`
+    - Speed: `100Mbps`
 
 ### Master node 
 
@@ -118,28 +135,7 @@ I developing my Homelab with Fluxcd Gitops.
 
 <img width="1471" height="641" alt="obraz" src="https://github.com/user-attachments/assets/b6615a01-9b87-4f51-900c-173df628326f" />
 
-
-
-NOTES
-
-
-### Hardware
-
-- 1 × DELL Latitude 5480:
-    - CPU: `Intel(R) Core(TM) i5-6300U (4) @ 3.00 GHz`
-    - RAM: `16GB`
-    - SSD: `256GB`
- 
-- 2 × HP t620 Quad Core TC:
-    - CPU: `AMD GX-217GA SOC with Radeon(tm) HD Graphics (2) @ 1.65 GHz`
-    - RAM: `8GB`
-    - SSD: `128GB`
-
-- TP-Link `TL-SG108` switch:
-    - Ports: `4`
-    - Speed: `100Mbps`
-
-
+~~~~~
 
 This project utilizes [Infrastructure as Code](https://en.wikipedia.org/wiki/Infrastructure_as_code) and [GitOps](https://www.weave.works/technologies/gitops) to automate provisioning, operating, and updating self-hosted services in my homelab.
 It can be used as a highly customizable framework to build your own homelab.
@@ -157,33 +153,19 @@ If you encounter an issue, please create [a bug report](https://github.com/khued
 
 his project is still in the experimental stage, and I don't use anything critical on it.
 Expect breaking changes that may require a complete redeployment.
-A proper upgrade path is planned for the stable release.
-More information can be found in [the roadmap](#roadmap) below.
-
-### Features
+I use it as a tool to prep to CKA Exam.
 
 
-
-
-- [x] Common applications: Gitea, Jellyfin, Paperless...
-- [x] Automated bare metal provisioning with PXE boot METALL BL
+- [] Common applications: Gitea, Jellyfin, Paperless...
+- [x] Automated bare metal IP provisioning with Metal LB
+- [x] Confirmed bash scripts to install Kubernetes on control plane and worker nodes.
 - [] Automated Kubernetes installation and management
 - [x] Installing and managing applications using GitOps
-- [x] Automatic rolling upgrade for OS and Kubernetes
-- [x] Automatically update apps (with approval)
-- [x] Modular architecture, easy to add or remove features/components
-- [] Automated certificate management
-- [x] Automatically update DNS records for exposed services
-- [] VPN (Tailscale or Wireguard)
 - [x] Expose services to the internet securely with [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/)
 - [] CI/CD platform
-- [] Private container registry
 - [x] Distributed storage
-- [x] Support multiple environments (dev, prod)
 - [x] Monitoring and alerting
-- [x] Automated backup and restore
-- [x] Single sign-on
-- [x] Infrastructure testing
+- [x] Automated backup
 
 Some demo videos and screenshots are shown ON BLOG.
 
