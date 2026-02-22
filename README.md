@@ -238,7 +238,6 @@ Some article and screenshots on my blog.
         <td><a href="https://kanidm.com">Kanidm</a></td>
         <td>Modern and simple identity management platform</td>
     </tr>
-
     <tr>
         <td><img width="32" src="https://github.com/grafana/loki/blob/main/docs/sources/logo.png?raw=true"></td>
         <td><a href="https://grafana.com/oss/loki">Loki</a></td>
