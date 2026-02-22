@@ -219,18 +219,13 @@ Some article and screenshots on my blog.
         <td>The package manager for Kubernetes</td>
     </tr>
     <tr>
-        <td><img width="32" src="https://kanidm.com/images/logo.svg"></td>
-        <td><a href="https://kanidm.com">Kanidm</a></td>
-        <td>Modern and simple identity management platform</td>
-    </tr>
-    <tr>
         <td><img width="32" src="https://github.com/grafana/loki/blob/main/docs/sources/logo.png?raw=true"></td>
         <td><a href="https://grafana.com/oss/loki">Loki</a></td>
         <td>Log aggregation system</td>
     </tr>
     <tr>
-        <td><img width="32" src="https://avatars.githubusercontent.com/u/1412239?s=200&v=4"></td>
-        <td><a href="https://www.nginx.com">Traefik</a></td>
+        <td><img width="32" src="https://avatars.githubusercontent.com/traefik"></td>
+        <td><a href="https://doc.traefik.io/">Traefik</a></td>
         <td>Kubernetes Ingress Controller</td>
     </tr>
     <tr>
