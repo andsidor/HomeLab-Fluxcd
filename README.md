@@ -184,6 +184,7 @@ Some demo videos and screenshots are shown ON BLOG.
 [alert-demo]: https://github.com/khuedoan/homelab/assets/27996771/c922f755-e911-4ca0-9d4a-6e552d387f18
 [ai-demo]: https://github.com/khuedoan/homelab/assets/27996771/d77ba511-00b7-47c3-9032-55679a099e70
 
+
 ### Tech stack
 
 <table>
@@ -199,7 +200,7 @@ Some demo videos and screenshots are shown ON BLOG.
     </tr>
     <tr>
         <td><img width="32" src="https://avatars.githubusercontent.com/u/30269780"></td>
-        <td><a href="https://argoproj.github.io/cd">FLUXXXXXXXXXXXXXXXXXXX</a></td>
+        <td><a href="https://argoproj.github.io/cd">ArgoCD</a></td>
         <td>GitOps tool built to deploy applications to Kubernetes</td>
     </tr>
     <tr>
@@ -319,11 +320,10 @@ Some demo videos and screenshots are shown ON BLOG.
     </tr>
 </table>
 
+
 ##  Blogerr Links:
 
 
-- [Ephemeral PXE server inspired by Minimal First Machine in the DC](https://speakerdeck.com/amcguign/minimal-first-machine-in-the-dc)
-- [ArgoCD usage and monitoring configuration in locmai/humble](https://github.com/locmai/humble)
 - [README template](https://github.com/othneildrew/Best-README-Template)
 
 
