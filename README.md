@@ -4,7 +4,7 @@
 I developing my Homelab. I build Kubernetes K8s on Debian Server. I choose it due to stability.
 To manage K8s, I selected Flux Cd - GitOps. All cluster resourves are installed by Flux.
 To achive simialar UX to ArgoCD, I set up Headlamp.
-TO Git To vith Fluxcd Gitops. To visualize simi
+
 
 ### Dashboard screen
 
