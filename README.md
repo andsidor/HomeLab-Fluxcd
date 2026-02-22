@@ -172,10 +172,6 @@ Some article and screenshots on my blog.
 
 ### Tech stack
 
-[deploy-demo]: https://asciinema.org/a/xkBRkwC6e9RAzVuMDXH3nGHp7.svg
-
-### Tech stack
-
 <table>
     <tr>
         <th>Logo</th>
