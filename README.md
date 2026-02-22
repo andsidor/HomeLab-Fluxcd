@@ -135,7 +135,7 @@ TO Git To vith Fluxcd Gitops. To visualize simi
 
 <img width="1471" height="641" alt="obraz" src="https://github.com/user-attachments/assets/b6615a01-9b87-4f51-900c-173df628326f" />
 
-~~~~~
+
 
 This project utilizes [Infrastructure as Code](https://en.wikipedia.org/wiki/Infrastructure_as_code) and [GitOps](https://www.weave.works/technologies/gitops) to automate provisioning, operating, and updating self-hosted services in my homelab.
 It can be used as a highly customizable framework to build your own homelab.
