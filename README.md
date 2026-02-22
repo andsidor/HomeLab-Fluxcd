@@ -182,9 +182,9 @@ Some article and screenshots on my blog.
         <th>Description</th>
     </tr>
     <tr>
-        <td><img width="32" src="https://simpleicons.org/icons/ansible.svg"></td>
-        <td><a href="https://www.ansible.com">Ansible</a></td>
-        <td>Automate bare metal provisioning and configuration</td>
+        <td><img width="32" src="https://avatars.githubusercontent.com/u/13629408"></td>
+        <td><a href="https://kubernetes.io">Kubernetes</a></td>
+        <td>Container-orchestration system, the backbone of this project</td>
     </tr>
     <tr>
         <td><img width="32" src="https://avatars.githubusercontent.com/u/30269780"></td>
@@ -222,11 +222,6 @@ Some article and screenshots on my blog.
         <td>Base OS for Kubernetes nodes</td>
     </tr>
     <tr>
-        <td><img width="32" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Gitea_Logo.svg"></td>
-        <td><a href="https://gitea.com">Gitea</a></td>
-        <td>Self-hosted Git service</td>
-    </tr>
-    <tr>
         <td><img width="32" src="https://grafana.com/static/img/menu/grafana2.svg"></td>
         <td><a href="https://grafana.com">Grafana</a></td>
         <td>Observability platform</td>
@@ -246,11 +241,7 @@ Some article and screenshots on my blog.
         <td><a href="https://kanidm.com">Kanidm</a></td>
         <td>Modern and simple identity management platform</td>
     </tr>
-    <tr>
-        <td><img width="32" src="https://avatars.githubusercontent.com/u/13629408"></td>
-        <td><a href="https://kubernetes.io">Kubernetes</a></td>
-        <td>Container-orchestration system, the backbone of this project</td>
-    </tr>
+
     <tr>
         <td><img width="32" src="https://github.com/grafana/loki/blob/main/docs/sources/logo.png?raw=true"></td>
         <td><a href="https://grafana.com/oss/loki">Loki</a></td>
