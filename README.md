@@ -153,6 +153,7 @@ Expect breaking changes that may require a complete redeployment.
 I use it as a tool to prep to CKA Exam.
 
 
+- [x] Common applications: Linkding, Linkwarden, Homarr
 - [] Common applications: Gitea, Jellyfin, Paperless...
 - [x] Automated bare metal IP provisioning with Metal LB
 - [x] Confirmed bash scripts to install Kubernetes on control plane and worker nodes.
