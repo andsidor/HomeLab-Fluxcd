@@ -177,12 +177,14 @@ I use it as a tool to prep to CKA Exam.
 - [x] Distributed storage
 - [x] Monitoring and alerting
 - [x] Automated backup
+- [x] Kubernetes bash install
 
 Some article and screenshots on my blog.
 
 ##  Blogerr Links:
 - [Kubespray Homelab K8s](https://asidor23.blogspot.com/2025/10/kubespray-homelab.html)
-- .....
+- [Kubernetes shell install](https://www.blogger.com/blog/post/edit/8850073307722351725/2911893130499593714)
+-  .....
 
 ### Tech stack
 
