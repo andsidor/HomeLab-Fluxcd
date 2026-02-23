@@ -137,6 +137,15 @@ Addtionally access to Clouflare tunnel, is secured by Cloudflare App.
 
 <img width="1471" height="641" alt="obraz" src="https://github.com/user-attachments/assets/b6615a01-9b87-4f51-900c-173df628326f" />
 
+### Security
+
+### AdGuard
+<img width="1360" height="345" alt="obraz" src="https://github.com/user-attachments/assets/ea4748a7-0943-4515-80e1-7021912ced0f" />
+### Cloudflare App
+Protect your Self-Hosted, SaaS, and Private applications with Zero Trust policies. Only users who match your policies can access your configured applications.
+From One-time PIN to External 
+<img width="1197" height="602" alt="obraz" src="https://github.com/user-attachments/assets/cb8de30f-e53e-4fd1-a990-7276ae5c2af8" />
+
 
 
 This project utilizes [Infrastructure as Code](https://en.wikipedia.org/wiki/Infrastructure_as_code) and [GitOps](https://www.weave.works/technologies/gitops) to automate provisioning, operating, and updating self-hosted services in my homelab.
