@@ -24,7 +24,7 @@ spec:
         tls:
           enabled: false
       minio:
-        enabled: false
+        enabled: true
       registry:
         enabled: false
 
